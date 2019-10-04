@@ -416,7 +416,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .popup_top{display: table-row; background: #006EB6; height: 60px; line-height: 60px;}
 .popup_top h1{font-size: 22px; font-weight: 500; color: #fff; padding: 0 20px; box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);}
 .popup_content{display: table-row;}
-.content-box{padding: 20px; overflow-y: auto; height: 480px;}
+.content-box{padding: 20px 10px; overflow-y: auto; height: 480px; font-size: .75vw;}
 .content-box h2{font-size: 18px; line-height: 30px;}
 .popup_tbl{border-top: 2px solid #1898D2; width: 100%;}
 .popup_tbl tbody tr{border-bottom: 1px solid #eee;}
