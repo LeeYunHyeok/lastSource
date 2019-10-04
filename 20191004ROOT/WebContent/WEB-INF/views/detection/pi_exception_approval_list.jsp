@@ -29,7 +29,7 @@
                     <caption>사용자정보</caption>
                     <tbody>
                         <tr>
-                            <td style="text-align: center; background-color: #eeeeee; width:100px">업무구분</td>
+                            <td style="text-align: center; background-color: #d6e4ed; width:100px">업무구분</td>
                             <td style="width:180px;">
                                 <select id="selectList" name="selectList" style="width:160px;">
                                     <option value="/approval/pi_search_list">정탐/오탐 리스트</option>
@@ -39,7 +39,7 @@
                                     <option value="/change/pi_change_list"> 담당자 변경 리스트</option>
                                 </select>
                             </td>
-                            <td style="text-align: center; background-color: #eeeeee; width:100px">상태</td>
+                            <td style="text-align: center; background-color: #d6e4ed; width:100px">상태</td>
                             <td>
                                 <select id="statusList" name="statusList" style="width:100px;">
                                     <option value="">전체</option>
@@ -48,11 +48,11 @@
                                     <option value="W" selected>승인대기</option>
                                 </select>
                             </td>
-                            <td style="text-align: center; background-color: #eeeeee; width:100px">문서명</td>
+                            <td style="text-align: center; background-color: #d6e4ed; width:100px">문서명</td>
                             <td><input type="text" style="width: 100%;" size="20" id="schPath" placeholder="문서명을 입력하세요"></td>
-                            <td style="text-align: center; background-color: #eeeeee; width:100px">기안자</td>
+                            <td style="text-align: center; background-color: #d6e4ed; width:100px">기안자</td>
                             <td><input type="text" style="width: 100%;" size="10" id="schUserNm" placeholder="기안자명을 입력하세요"></td>
-                            <td style="text-align: center; background-color: #eeeeee; width:100px">문서기안일</td>
+                            <td style="text-align: center; background-color: #d6e4ed; width:100px">문서기안일</td>
                             <td style="width:300px;">
                                 <input type="date" id="fromDate" style="text-align: center; width:127px" readonly="readonly" value="${fromDate}" >
                                 <span style="width: 8%; margin-right: 3px;">~</span>
