@@ -444,6 +444,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .answerRadio:before {
     position: absolute;
     content: "정탐";
+    display:inline-block;
     line-height: 40px;
     top: 2px;
     left: -1px;
@@ -461,6 +462,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .wrongRadio:before {
     position: absolute;
     content: "오탐";
+    display:inline-block;
     line-height: 40px;
     top: 2px;
     left: -1px;
