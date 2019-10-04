@@ -16,7 +16,7 @@
 			<div class="location_area">
 				<p class="location">검출 관리 > 서버 리스트</p>
 			</div>
-			<div class="left_area2">
+			<div class="left_area2 serverList_Left">
 				<h3 class="serverListMenu">서버 리스트</h3>
 				<div class="left_box2" style="overflow: hidden; max-height: 580px; height: 580px;">
 					<div class="search_area bold">

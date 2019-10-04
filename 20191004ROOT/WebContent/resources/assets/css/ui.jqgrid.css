@@ -571,3 +571,10 @@ td.menu_text {
 	border-bottom-right-radius: 0px;
 	min-width: 820px !important;
 }
+.serverList_Left .ui-corner-all {
+	min-width: 320px !important;
+}
+.serverList_Left .ui-jqgrid .ui-jqgrid-htable {
+	min-width: 320px !important;
+}
+.left_box2 .ui-corner-all
