@@ -449,7 +449,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     left: -1px;
     background: #1898D2;
     color: #ffffff;
-    width: 50px;
+    width: 120%;
     height: 40px;
     text-align: center;
     cursor: pointer;
@@ -466,7 +466,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     left: -1px;
     background: #1898D2;
     color: #ffffff;
-    width: 50px;
+    width: 120%;
     height: 40px;
     text-align: center;
     cursor: pointer;
