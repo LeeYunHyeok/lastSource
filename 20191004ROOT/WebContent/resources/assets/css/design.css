@@ -444,15 +444,29 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .answerRadio:before {
     position: absolute;
     content: "정탐";
-    top: 17px;
-    left: 11px;
+    line-height: 40px;
+    top: 2px;
+    left: -1px;
+    background: #1898D2;
+    color: #ffffff;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
 }
 .wrongRadio{position: relative;}
 .wrongRadio:before {
     position: absolute;
     content: "오탐";
-    top: 17px;
-    left: 11px;
+    line-height: 40px;
+    top: 2px;
+    left: -1px;
+    background: #1898D2;
+    color: #ffffff;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
 }
 /*****footer_copyright*****/
 .footer_area{display: table; width: 100%; padding: 0 50px; height: 80px; line-height: 80px; background: #f4f4f4; border-top: 2px solid #006EB6;}
