@@ -270,8 +270,8 @@ if (userAgent.indexOf("Trident") > 0 || userAgent.indexOf("MSIE") > 0) {
                         <tr>
                             <th style="background-color: #f1f1f1; text-align: center;">사유</th>
                             <td>
-                                <input type="radio" name="trueFalseChk" id="selectReasonTrue" value="" class="edt_sch" style=" border: 0px solid #cdcdcd;" placeholder="정탐">
-                                <input type="radio" name="trueFalseChk" id="selectReasonFalse" value="" class="edt_sch" style="margin-left:40px; border: 0px solid #cdcdcd;">&nbsp;오탐
+                                <input type="radio" class="answerRadio" name="trueFalseChk" id="selectReasonTrue" value="" class="edt_sch" style="border: 0px solid #cdcdcd; width:100px; height:100px;" placeholder="정탐">
+                                <input type="radio" class="wrongRadio" name="trueFalseChk" id="selectReasonFalse" value="" class="edt_sch" style="border: 0px solid #cdcdcd; width:100px; height:100px;" placeholder="오탐">
                                 <input type="hidden" id="selectedDate" value="">
                                 <input type="hidden" id="group_id" value="">
                             </td>  
