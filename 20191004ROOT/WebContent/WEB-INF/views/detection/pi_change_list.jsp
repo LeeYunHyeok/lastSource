@@ -15,7 +15,7 @@
 				<p class="location">검출 관리 > 결재 관리 > 담당자 변경 리스트</p>
 			</div>
 			<div class="grid_top">
-				<h3>담당자 변경 리스트 </h3>
+				<h3 class="approvalListMenu">담당자 변경 리스트 </h3>
                 <div class="list_sch">
                     <div class="radio_area">
                         <input type="radio" name="rdo_requestStatus" id="rdo001" value="R" checked="checked"><label for="rdo001">요청</label>

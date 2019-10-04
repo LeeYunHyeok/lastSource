@@ -14,7 +14,7 @@
 				<p class="location">검출 관리 > 결재 관리 > 정탐/오탐 리스트</p>
 			</div>
 			<div class="grid_top">
-				<h3>정탐/오탐 리스트</h3>
+				<h3 class="approvalListMenu">정탐/오탐 리스트</h3>
 				<div class="list_sch">
 					<div class="sch_area">
 						<button type="button" name="button" class="btn_new" id="btnSearch">Search</button>
@@ -22,13 +22,13 @@
 						<button type="button" name="button" class="btn_new" id="btnApprovalRequest">결재 요청</button>
 					</div>
 				</div>
-				<table class="user_info">
+				<table class="user_info approvalTh">
 					<caption>사용자정보</caption>
 					<tbody>
 						<tr>
-							<td style="text-align: center; background-color: #eeeeee; width:100px">업무구분</td>
-							<td style="width:180px;">
-								<select id="selectList" name="selectList" style="width:160px;">
+							<td style="text-align: center; background-color: #d6e4ed; width:5vw">업무구분</td>
+							<td style="width:9.2vw;">
+								<select id="selectList" name="selectList" style="width:8.5vw;">
 									<option value="/approval/pi_search_list" selected>정탐/오탐 리스트</option>
 									<option value="/approval/pi_search_approval_list">정탐/오탐 결재 리스트</option>
 									<!-- <option value="/excepter/pi_exception_list">경로 예외 리스트</option>
@@ -36,9 +36,9 @@
 									<option value="/change/pi_change_list"> 담당자 변경 리스트</option>
 								</select>
 							</td>
-							<td style="text-align: center; background-color: #eeeeee; width:100px">상태</td>
-							<td>
-                                <select id="statusList" name="statusList" style="width:100px;">
+							<td style="text-align: center; background-color: #d6e4ed; width:3vw">상태</td>
+							<td style="width: 5.2vw;">
+                                <select id="statusList" name="statusList" style="width:4.5vw;">
                                     <option value="">전체</option>
                                     <option value="E">승인완료</option>
                                     <option value="D">반려</option>
@@ -46,15 +46,15 @@
                                     <option value="NR" selected>미요청</option>
                                 </select>
 							</td>
-							<td style="text-align: center; background-color: #eeeeee; width:100px">호스트</td>
-							<td><input type="text" style="width: 100%;" size="10" id="schOwner" placeholder="호스트명을 입력하세요"></td>
-							<td style="text-align: center; background-color: #eeeeee; width:100px">문서명</td>
-							<td><input type="text" style="width: 100%;" size="20" id="schFilename" placeholder="문서명을 입력하세요"></td>
-							<td style="text-align: center; background-color: #eeeeee; width:100px">문서저장일</td>
-							<td style="width:300px;">
-								<input type="date" id="fromDate" style="text-align: center; width:127px" readonly="readonly" value="${fromDate}" >
+							<td style="text-align: center; background-color: #d6e4ed; width:4vw">호스트</td>
+							<td style="width: 9.5vw;"><input type="text" style="width: 8.8vw; font-size: .85vw;" size="10" id="schOwner" placeholder="호스트명을 입력하세요"></td>
+							<td style="text-align: center; background-color: #d6e4ed;; width:4vw">문서명</td>
+							<td style="width: 8.9vw;"><input type="text" style="width: 8vw; font-size: .85vw;" size="20" id="schFilename" placeholder="문서명을 입력하세요"></td>
+							<td style="text-align: center; background-color: #d6e4ed; width:5.5vw">문서저장일</td>
+							<td style="width:17vw;">
+								<input type="date" id="fromDate" style="text-align: center;  width:7.5vw; font-size:.6vw;" readonly="readonly" value="${fromDate}" >
 								<span style="width: 8%; margin-right: 3px;">~</span>
-								<input type="date" id="toDate" style="text-align: center; width:127px" readonly="readonly" value="${toDate}" >
+								<input type="date" id="toDate" style="text-align: center;  width:7.5vw; font-size:.6vw;" value="${toDate}" >
 							</td>
 						</tr>
 					</tbody>

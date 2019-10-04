@@ -15,7 +15,7 @@
 				<p class="location">검출 관리 > 결재 관리 > 정탐/오탐 결재 리스트</p>
 			</div>
 			<div class="grid_top">
-				<h3 class="approvalListMenu">결재 관리</h3>
+				<h3 class="approvalListMenu">정탐/오탐 결재 리스트</h3>
 	            <div class="list_sch">
 	            <c:if test="${memberInfo.USER_GRADE != '0'}">
 	                <div class="sch_area">
