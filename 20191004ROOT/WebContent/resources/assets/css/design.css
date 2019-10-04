@@ -440,15 +440,19 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     background: #1898D2;
 }
 .btn_area button:hover{background: #006EB6; color: #fff;}
-.answerRadio {
-	position: relative;
-}
+.answerRadio {position: relative;}
 .answerRadio:before {
-	position: absolute;
-	content:"정탐";
-	top:0;
-	left:0;
-	
+    position: absolute;
+    content: "정탐";
+    top: 40px;
+    left: 36px;
+}
+.wrongRadio{position: relative;}
+.wrongRadio:before {
+    position: absolute;
+    content: "오탐";
+    top: 40px;
+    left: 36px;
 }
 /*****footer_copyright*****/
 .footer_area{display: table; width: 100%; padding: 0 50px; height: 80px; line-height: 80px; background: #f4f4f4; border-top: 2px solid #006EB6;}
