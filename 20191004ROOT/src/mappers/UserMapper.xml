@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.org.iopts.mapper.UserMapper">
+
+	<!-- mybatis-config.xml의 typeAlias에 등록해두지 않았다면
+	<select id="selectMember" resultType="com.org.iopts.dto.MemberVO" > 
+		SELECT ID, PW ,NAME FROM TEST 
+	</select> 
+	이렇게 해야 한다. -->
+
+	<select id="selectMember" parameterType="hashmap" resultType="hashmap">
+	   SELECT DISTINCT U.USER_NO, U.JIKWEE, U.JIKGUK, U.BOSS_NAME, U.USER_GRADE, U.USER_NAME, U.INSA_CODE, G.TEAM_NAME, U.REGDATE,
+			CASE WHEN U.PASSWORD = SHA2(HEX(#{password}),256) THEN 'Y' ELSE 'N' END AS PASSWORD,U.USER_GRADE, REPLACE(IFNULL(U.ACCESS_IP, ''), ' ', '') AS ACCESS_IP,
+			(SELECT ACC.OFFICE_NM FROM PI_ACCOUNT_INFO ACC WHERE ACC.USER_ID = U.USER_NO LIMIT 1) AS OFFICE_NM
+		FROM PI_USER U, PI_GROUP G
+			WHERE U.INSA_CODE = G.INSA_CODE
+				AND U.USER_NO = (#{user_no})
+	</select>
+
+    <select id="selectSSOMember" parameterType="hashmap" resultType="hashmap">
+        SELECT DISTINCT U.USER_NO, 
+               U.JIKWEE, 
+               U.JIKGUK, 
+               U.BOSS_NAME, 
+               U.USER_GRADE, 
+               U.USER_NAME, 
+               U.INSA_CODE, 
+               G.TEAM_NAME, 
+               U.REGDATE,
+               'Y' AS PASSWORD,
+               U.USER_GRADE, 
+               REPLACE(IFNULL(U.ACCESS_IP, ''), ' ', '') AS ACCESS_IP 
+          FROM PI_USER U, PI_GROUP G
+         WHERE U.INSA_CODE = G.INSA_CODE
+           AND U.USER_NO = (#{user_no})
+    </select>
+
+	<select id="selectTeamMember" parameterType="hashmap" resultType="hashmap">
+		SELECT U.USER_NO, U.JIKWEE, U.JIKGUK, U.BOSS_NAME, U.USER_GRADE, U.USER_NAME, U.INSA_CODE, G.TEAM_NAME, U.REGDATE
+		  FROM PI_USER U, PI_GROUP G
+		 WHERE U.INSA_CODE = G.INSA_CODE 
+		   AND U.INSA_CODE = #{insa_code}
+		   AND U.USER_NO != #{user_no}
+	</select>
+	
+	<select id="selectTeamManager" parameterType="hashmap" resultType="hashmap">
+		SELECT U.USER_NO, U.JIKWEE, U.JIKGUK, U.USER_GRADE, U.USER_NAME, U.INSA_CODE
+		  FROM PI_USER U
+		 WHERE U.USER_NAME = (SELECT Z.BOSS_NAME FROM PI_USER Z WHERE Z.USER_NO = #{value})
+	</select>
+ 
+	<update id="updatePassword" parameterType="hashmap">
+		UPDATE PI_USER
+		  SET PASSWORD = SHA2(HEX(#{newPasswd}),256)
+		 WHERE USER_NO = #{user_no}
+		   AND PASSWORD = SHA2(HEX(#{oldPassword}),256)
+	</update>	
+	
+	<insert id="insertMemberLog" parameterType="hashmap">
+		INSERT INTO pi_userlog
+		(USER_NO, MENU_NAME, JOB_INFO, USER_IP, REGDATE)
+		VALUES
+		(#{user_no}, #{menu_name}, #{job_info}, #{user_ip}, NOW())
+	</insert>
+	
+	<select id="selectTarget" resultType="pi_targetVO">
+		SELECT t.name,t.platform,g.name,g.search_time,t.matchcnt,t.search_status,t.regdate FROM pi_groupall g, pi_targets t WHERE g.group_id = t.group_id
+	</select>
+
+	<select id="selectUserLogList" resultType="hashmap">
+		SELECT  L.USER_NO, L.JOB_INFO, L.USER_IP, L.MENU_NAME,
+      			DATE_FORMAT(L.REGDATE, '%Y-%m-%d %H:%i:%s') AS REGDATE,
+      			U.USER_NAME
+		  FROM PI_USERLOG L, PI_USER U
+		 WHERE U.USER_NO = L.USER_NO 
+		<if test="userNo != null and userNo != ''">
+		   AND L.USER_NO LIKE CONCAT('%', #{userNo}, '%')
+		</if>
+		<if test="userName != null and userName != ''">
+		   AND U.USER_NAME LIKE CONCAT('%', #{userName}, '%')
+		</if>
+		<if test="fromDate != null and toDate != null">  
+		   AND L.REGDATE BETWEEN #{fromDate} AND #{toDate} 
+		</if> 
+		 ORDER BY REGDATE DESC
+	</select>
+	
+	<select id="selectAccessIP" parameterType="String" resultType="String">
+		SELECT U.ACCESS_IP
+		  FROM PI_USER U
+		 WHERE U.USER_NO = #{user_no}
+	</select>
+	
+	<update id="changeAccessIP" parameterType="hashmap">
+		UPDATE PI_USER
+		  SET ACCESS_IP = #{accessIP}
+		 WHERE USER_NO = #{userNo}
+	</update>	
+	
+	<select id="selectManagerList" resultType="hashmap">
+		SELECT U.USER_NO, U.JIKWEE, U.JIKGUK, U.BOSS_NAME, U.USER_NAME, U.INSA_CODE, G.TEAM_NAME, 
+		       DATE_FORMAT(U.REGDATE, '%Y-%m-%d %h:%i:%s' ) AS REGDATE,
+		       U.USER_GRADE, U.USER_GRADE AS OLD_USER_GRADE 
+		  FROM PI_USER U, PI_GROUP G
+		 WHERE U.INSA_CODE = G.INSA_CODE 
+       	   AND U.USER_GRADE != '9'
+	</select>
+	
+	<update id="changeManagerList" parameterType="hashmap">
+		UPDATE PI_USER
+		   SET USER_GRADE = #{userGrade}
+		 WHERE USER_NO = #{userNo}
+	</update>	
+	
+	<select id="selectTeamCode" resultType="hashmap">
+		SELECT INSA_CODE, TEAM_NAME 
+		  FROM PI_GROUP
+	</select>	
+	
+	<select id="chkDuplicateUserNo" resultType="hashmap">
+		SELECT COUNT(*) EXISTUSERCNT 
+		  FROM PI_USER
+		 WHERE USER_NO = #{userNo}
+	</select>	
+	
+	<insert id="createUser" parameterType="hashmap">
+		INSERT INTO PI_USER
+			(USER_NO, USER_NAME, PASSWORD, INSA_CODE, USER_GRADE, JIKWEE, JIKGUK, REGDATE) 
+		VALUES 
+			(#{userNo}, #{userName}, SHA2(HEX(#{password}),256), #{team}, #{grade}, #{jikwee}, #{jikguk}, NOW());
+	</insert>
+	
+</mapper>

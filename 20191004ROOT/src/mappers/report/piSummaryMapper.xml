@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.org.iopts.report.dao.piSummaryDAO">
+    
+    <select id="searchSummaryList" parameterType="hashmap" resultType="hashmap">
+		SELECT  A.GROUP_ID,
+				A.TARGET_ID,
+				A.HASH_ID,
+				A.ACCOUNT,
+				A.TARGET_NAME, -- Hostname
+				A.AGENT_PLATFORM, -- OS
+				A.PATH, -- 경로
+				A.OFFICE_NM, -- 팀명
+				A.USER_ID, -- 사번
+				A.USER_NM, -- 담당자명
+				A.CREDATE, -- 생성일
+				A.DELDATE, -- 삭제일
+				A.PROCESSING_FLAG, -- 처리 상태 
+				A.REGDATE, -- 기안일
+				A.OKDATE, -- 결재일
+				A.USER_NO, -- 기안자
+				A.OKUSER_NO, -- 결재자
+				(SELECT USER_NM FROM PI_ACCOUNT_INFO AI WHERE AI.USER_ID = A.USER_NO AND AI.ACCOUNT = A.ACCOUNT AND AI.SVR_HOST = A.TARGET_NAME LIMIT 1) AS ACCOUNT_USER_NM,  -- 기안자
+				(SELECT USER_NM FROM PI_ACCOUNT_INFO AI WHERE AI.USER_ID = A.OKUSER_NO AND AI.ACCOUNT = A.ACCOUNT AND AI.SVR_HOST = A.TARGET_NAME LIMIT 1) AS ACCOUNT_OKUSER_NM,  -- 결재자
+				A.APPROVAL_STATUS,
+				A.NOTE, 
+				A.TYPE1, -- 주민번호
+				A.TYPE2, -- 외국인
+				A.TYPE3, -- 여권
+				A.TYPE4, -- 운전면허번호
+				A.TYPE5, -- 계좌
+				A.TYPE6 -- 카드
+		  FROM (
+			    SELECT A.GROUP_ID, A.TARGET_ID, A.HASH_ID, C.NAME AS TARGET_NAME, D.AGENT_PLATFORM, A.PATH, E.OFFICE_NM, E.USER_ID, E.USER_NM,
+				    DATE_FORMAT(A.CREDATE, '%Y-%m-%d %H:%i:%S') AS CREDATE, DATE_FORMAT(A.DELDATE, '%Y-%m-%d %H:%i:%S') AS DELDATE, A.ACCOUNT, B.PROCESSING_FLAG, 
+				    DATE_FORMAT(B.REGDATE, '%Y-%m-%d %H:%i:%S') AS REGDATE, DATE_FORMAT(B.OKDATE, '%Y-%m-%d %H:%i:%S') AS OKDATE,
+				    B.USER_NO, B.OKUSER_NO, B.APPROVAL_STATUS, G.NOTE,
+				    CASE WHEN INSTR(UPPER(f.DATA_TYPE), 'SOUTH KOREAN RRN') > 0 THEN f.MATCH_COUNT ELSE 0 END AS TYPE1, -- 주민등록번호
+				    CASE WHEN INSTR(UPPER(f.DATA_TYPE), 'SOUTH KOREAN DRIVER LICENSE NUMBER') > 0 THEN f.MATCH_COUNT ELSE 0 END AS TYPE4, -- 운전면허번호
+				    CASE WHEN INSTR(UPPER(f.DATA_TYPE), 'SOUTH KOREAN FOREIGNER NUMBER') > 0 THEN f.MATCH_COUNT ELSE 0 END AS TYPE2, -- 외국인등록번호
+				    CASE WHEN INSTR(UPPER(f.DATA_TYPE), 'SOUTH KOREAN PASSPORT') > 0 THEN f.MATCH_COUNT ELSE 0 END AS TYPE3, -- 여권번호
+				    CASE WHEN INSTR(UPPER(f.DATA_TYPE), 'ACCOUNT NUMBER') > 0 THEN F.MATCH_COUNT ELSE 0 END AS TYPE5, -- 계좌번호
+				    CASE WHEN INSTR(UPPER(F.DATA_TYPE), 'AMERICAN EXPRESS') > 0 THEN F.MATCH_COUNT ELSE 0 END +
+				    CASE WHEN INSTR(UPPER(F.DATA_TYPE), 'MAESTRO') > 0 THEN F.MATCH_COUNT ELSE 0 END +
+				    CASE WHEN INSTR(UPPER(F.DATA_TYPE), 'VISA') > 0 THEN F.MATCH_COUNT ELSE 0 END +
+				    CASE WHEN INSTR(UPPER(F.DATA_TYPE), 'PRIVATE LABEL CARD') > 0 THEN F.MATCH_COUNT ELSE 0 END +
+				    CASE WHEN INSTR(UPPER(F.DATA_TYPE), 'DINERS CLUB') > 0 THEN F.MATCH_COUNT ELSE 0 END +
+				    CASE WHEN INSTR(UPPER(F.DATA_TYPE), 'JCB') > 0 THEN F.MATCH_COUNT ELSE 0 END +
+				    CASE WHEN INSTR(UPPER(F.DATA_TYPE), 'LASER') > 0 THEN F.MATCH_COUNT ELSE 0 END +
+				    CASE WHEN INSTR(UPPER(F.DATA_TYPE), 'MASTER') > 0 THEN F.MATCH_COUNT ELSE 0 END AS TYPE6 -- 신용카드
+		      FROM PI_FIND A, PI_DATA_PROCESSING B, PI_TARGETS C, PI_AGENTS D, PI_ACCOUNT_INFO E, PI_SUMMARY F, PI_DATA_PROCESSING_GROUP G
+		     WHERE B.GROUP_ID = A.GROUP_ID
+		       AND B.TARGET_ID = A.TARGET_ID
+		       AND B.HASH_ID = A.HASH_ID
+		       AND C.GROUP_ID = B.GROUP_ID
+		       AND C.TARGET_ID = A.TARGET_ID
+		       AND C.NAME = D.AGENT_NAME
+		       AND E.USER_ID = A.OWNER
+		       AND E.ACCOUNT = A.ACCOUNT
+		       AND F.GROUP_ID = A.GROUP_ID
+		       AND F.TARGET_ID = A.TARGET_ID
+		       AND F.OBJECT_ID = A.HASH_ID
+		       AND A.REGDATE BETWEEN CONCAT(#{fromDate},' 00:00:00') AND CONCAT(#{toDate},' 23:59:59')
+		       <if test="owner != null and owner != ''">
+		       AND C.NAME LIKE CONCAT('%',#{owner},'%')
+		       </if>
+		       <if test="filename != null and filename != ''">
+		       AND A.PATH LIKE CONCAT('%',#{filename},'%')
+		       </if>
+				) A
+    </select>
+
+</mapper>

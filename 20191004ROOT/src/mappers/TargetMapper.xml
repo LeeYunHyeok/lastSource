@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="target">
+
+	<!-- mybatis-config.xml의 typeAlias에 등록해두지 않았다면 <select id="selectMember" resultType="com.org.iopts.dto.MemberVO" > SELECT ID, PW ,NAME FROM TEST </select> 이렇게 해야 한다. -->
+
+	<select id="selectTargetManage" resultType="hashmap">
+		SELECT T.TARGET_ID, LOWER(T.NAME) AS TARGET_NAME, A.AGENT_CONNECTED_IP, A.AGENT_CONNECTED, T.SEARCH_TIME, FROM_UNIXTIME(T.SEARCH_TIME) AS SEARCH_DATETIME, T.REGDATE 
+      	  FROM PI_TARGETS T, PI_AGENTS A 
+     	 WHERE T.NAME = A.AGENT_NAME
+	</select>
+
+	<select id="selectTargetList" resultType="hashmap" parameterType="String">
+		SELECT '0' AS CHK, 
+				T.TARGET_ID,
+				<!-- LOWER(A.AGENT_NAME) AS AGENT_NAME, --> 
+				A.AGENT_NAME AS AGENT_NAME,
+				EXPORT_SET(A.AGENT_CONNECTED,'1','0','',1) AS AGENT_CONNECTED,
+				A.AGENT_VERSION,
+				A.AGENT_PLATFORM,
+				A.AGENT_PLATFORM_COMPATIBILITY,
+				EXPORT_SET(A.AGENT_VERIFIED,'1','0','',1) AS AGENT_VERIFIED,
+				A.AGENT_CONNECTED,
+				A.AGENT_USER,
+				A.AGENT_CPU,
+				A.AGENT_CORES,
+				A.AGENT_BOOT,
+				A.AGENT_RAM,
+				A.AGENT_STARTED,
+				A.AGENT_CONNECTED_IP, 
+				T.SEARCH_TIME, 
+   				DATE_FORMAT(FROM_UNIXTIME(T.SEARCH_TIME), '%Y-%m-%d %h:%i:%s' ) AS SEARCH_DATETIME, 
+   				DATE_FORMAT(T.REGDATE, '%Y-%m-%d %h:%i:%s' ) AS REGDATE
+		  FROM PI_TARGETS T, PI_AGENTS A 
+		 WHERE T.NAME = A.AGENT_NAME
+   		   <if test="value != null and value != ''">
+   		   AND T.NAME LIKE CONCAT('%',#{value},'%')
+   		   </if>
+   		   ORDER BY A.AGENT_CONNECTED_IP, A.AGENT_NAME
+	</select>
+
+	<select id="selectTargetUser" resultType="hashmap" parameterType="hashmap">
+		SELECT CASE WHEN ISNULL(T.USER_NO) THEN '0' ELSE '1' END AS CHK, 
+				CASE WHEN ISNULL(T.USER_NO) THEN '0' ELSE '1' END AS CHKOLD,
+				CASE WHEN ISNULL(T.USER_NO) THEN '0' ELSE '1' END AS CHKBOX,
+            	U.USER_NO,	U.INSA_CODE, U.JIKWEE, U.JIKGUK, U.BOSS_NAME, U.USER_NAME, 
+            	T.TARGET_ID, T.REGDATE, G.TEAM_NAME
+		  FROM PI_USER U LEFT OUTER JOIN PI_TARGET_USER T
+		    ON T.USER_NO = U.USER_NO 
+		   AND U.INSA_CODE = #{insa_code}
+		   AND T.TARGET_ID = #{target} LEFT OUTER JOIN PI_GROUP G
+		    ON U.INSA_CODE = G.INSA_CODE
+	</select>
+	
+	<insert id="registTargetUser" parameterType="hashmap">
+		INSERT INTO PI_TARGET_USER
+			(USER_NO, TARGET_ID, REGDATE) 
+		VALUES 
+			(#{user_no}, #{target}, NOW());
+	</insert>
+	
+	<delete id="deleteTargetUser" parameterType="hashmap">
+		DELETE FROM PI_TARGET_USER
+		 WHERE TARGET_ID = #{target}
+		   AND USER_NO = #{user_no}
+	</delete>
+
+	<insert id="insertTargets" parameterType="java.util.List">
+		INSERT INTO piboard.pi_targets
+		(group_id, target_id, comments, search_status, name, platform, critical, error, notice, test, prohibited, matchcnt, regdate)
+		VALUES
+	<foreach collection="list" item="item" separator=" , ">
+		(#{item.group_id}, #{item.target_id}, #{item.comments}, #{item.search_status}, #{item.name}, #{item.platform},
+		#{item.critical}, #{item.error}, #{item.notice}, #{item.test},
+		#{item.prohibited}, #{item.matchcnt}, NOW())
+	</foreach>
+	</insert>
+	
+	<!-- 타켓관리에서 사용하는 TARGET LIST, 사용자에 할당된 TARGET --> 
+	<select id="selectUserTargetList" parameterType="hashmap" resultType="hashmap">
+		SELECT '0' AS CHK, 
+				T.TARGET_ID,
+				<!-- LOWER(A.AGENT_NAME) AS AGENT_NAME, -->
+				A.AGENT_NAME AS AGENT_NAME,
+				EXPORT_SET(A.AGENT_CONNECTED,'1','0','',1) AS AGENT_CONNECTED,
+				A.AGENT_VERSION,
+				A.AGENT_PLATFORM,
+				A.AGENT_PLATFORM_COMPATIBILITY,
+				EXPORT_SET(A.AGENT_VERIFIED,'1','0','',1) AS AGENT_VERIFIED,
+				A.AGENT_CONNECTED,
+				A.AGENT_USER,
+				A.AGENT_CPU,
+				A.AGENT_CORES,
+				A.AGENT_BOOT,
+				A.AGENT_RAM,
+				A.AGENT_STARTED,
+				A.AGENT_CONNECTED_IP, 
+				T.SEARCH_TIME, 
+   				DATE_FORMAT(FROM_UNIXTIME(t.search_time), '%Y-%m-%d %h:%i:%s' ) as SEARCH_DATETIME, 
+   				DATE_FORMAT(t.regdate, '%Y-%m-%d %h:%i:%s' ) as REGDATE,
+   				IFNULL((SELECT SUM(S.MATCH_COUNT) FROM PI_SUMMARY S WHERE S.TARGET_ID = T.TARGET_ID),0) AS MATCH_CNT
+		  FROM PI_TARGETS T, PI_AGENTS A, PI_TARGET_USER U 
+		 WHERE T.NAME = A.AGENT_NAME
+       	   AND U.TARGET_ID = T.TARGET_ID
+       	   AND U.USER_NO = #{user_no}
+   		   <if test="host != null and host != ''">
+   		   AND A.AGENT_NAME LIKE CONCAT('%',#{host},'%')
+   		   </if>
+   		  ORDER BY MATCH_CNT DESC, A.AGENT_CONNECTED_IP, A.AGENT_NAME
+	</select>
+
+	<select id="selectTargetUserList" resultType="hashmap">
+		SELECT CASE WHEN ISNULL(T.USER_NO) THEN '0' ELSE '1' END AS CHK, 
+            	U.USER_NO,	U.INSA_CODE, U.JIKWEE, U.JIKGUK, U.BOSS_NAME, U.USER_NAME, 
+            	T.TARGET_ID, T.REGDATE, G.TEAM_NAME
+		  FROM PI_USER U JOIN PI_TARGET_USER T 
+		    ON T.USER_NO = U.USER_NO
+		   AND T.TARGET_ID = #{value} LEFT OUTER JOIN PI_GROUP G
+		    ON U.INSA_CODE = G.INSA_CODE
+	</select>
+	
+	<select id="selectServerFileTopN" parameterType="hashmap" resultType="hashmap">
+		SELECT CT.PATH
+				,CT.OWNER
+				,CT.CNT
+		FROM   (
+					WITH RECURSIVE CTE AS (
+					   SELECT C.GROUP_ID  AS GID,
+					            C.TARGET_ID AS PID,
+					            C.HASH_ID   AS ID,
+					            C.HASH_ID   AS CID,
+					            C.TARGET_ID AS TID,
+					            C.PATH      AS NAME,
+					            C.PATH      AS SHORTNAME,
+					            C.PATH      AS PATH,
+					            1           AS LEVEL,
+					            T.NAME      AS HOST,
+					            C.OWNER     AS OWNER
+					     FROM PI_TARGETS T LEFT OUTER JOIN PI_FIND C ON C.TARGET_ID = #{target_id} AND T.GROUP_ID  = C.GROUP_ID AND T.TARGET_ID = C.TARGET_ID
+					    WHERE T.TARGET_ID = #{target_id}
+					      <if test='user_no != null and user_no != ""'>
+					      	AND C.OWNER = #{user_no}
+					      </if>
+					   UNION ALL
+					   SELECT C.GROUP_ID    AS GID,
+					            C.PARENT_ID   AS PID,
+					            C.NODE_ID     AS ID,
+					            CTE.CID       AS CID,
+					            C.TARGET_ID   AS TID,
+					            CONCAT(CTE.NAME , '>' , C.PATH) AS NAME,
+					            C.PATH        AS SHORTNAME,
+					            CONCAT(CTE.PATH , '>' , C.NODE_ID) AS PATH,
+					            CTE.LEVEL + 1 AS LEVEL,
+					            T.NAME        AS HOST,
+					            #C.OWNER       AS OWNER
+					            CONCAT(IFNULL(CTE.OWNER,''), IFNULL(C.OWNER,'')) AS OWNER
+					     FROM PI_SUBPATH C, CTE, PI_TARGETS T 
+					    WHERE C.TARGET_ID = #{target_id}
+					      AND C.PARENT_ID = CTE.ID 
+					      AND C.TARGET_ID = CTE.TID
+					      AND C.GROUP_ID  = CTE.GID 
+					      AND C.GROUP_ID  = T.GROUP_ID
+					      AND C.TARGET_ID = T.TARGET_ID
+					)
+					SELECT CTE.PATH, IFNULL(CTE.OWNER, '') OWNER, SUM(SM.MATCH_COUNT) CNT
+					FROM   PI_SUMMARY SM, CTE
+					WHERE  SM.TARGET_ID = #{target_id}
+					  AND  SM.TARGET_ID = CTE.TID
+					  AND  SM.OBJECT_ID = CTE.ID
+					GROUP BY CTE.PATH, IFNULL(CTE.OWNER, '')
+		    ) CT
+		WHERE  CT.CNT &lt;&gt; 0
+		ORDER BY CT.CNT DESC
+		<!--
+		SELECT A.PATH, A.OWNER, A.CNT
+		  FROM (
+		    SELECT C.PATH, IFNULL(C.OWNER, '') OWNER, SUM(A.MATCH_COUNT) CNT
+		     FROM PI_SUMMARY A, PI_SUBPATH B, PI_FIND C
+		     WHERE A.TARGET_ID = #{target_id}
+		       AND B.TARGET_ID = A.TARGET_ID
+		       AND B.NODE_ID = A.OBJECT_ID
+		       AND C.TARGET_ID = B.TARGET_ID
+		       AND C.HASH_ID = B.PARENT_ID
+		       AND C.OWNER = #{user_no}
+		     GROUP BY C.PATH, IFNULL(B.OWNER, '')
+		     ) A
+		 WHERE A.CNT &lt;&gt; 0
+		 ORDER BY A.CNT DESC
+		 -->
+	</select>
+	
+	<select id="selectAdminServerFileTopN" parameterType="hashmap" resultType="hashmap">
+		SELECT CT.PATH
+				,CT.OWNER
+				,CT.CNT
+		FROM   (
+					WITH RECURSIVE CTE AS (
+					   SELECT C.GROUP_ID  AS GID,
+					            C.TARGET_ID AS PID,
+					            C.HASH_ID   AS ID,
+					            C.HASH_ID   AS CID,
+					            C.TARGET_ID AS TID,
+					            C.PATH      AS NAME,
+					            C.PATH      AS SHORTNAME,
+					            C.PATH      AS PATH,
+					            1           AS LEVEL,
+					            T.NAME      AS HOST,
+					            C.OWNER     AS OWNER
+					     FROM PI_TARGETS T LEFT OUTER JOIN PI_FIND C ON C.TARGET_ID = #{target_id} AND T.GROUP_ID  = C.GROUP_ID AND T.TARGET_ID = C.TARGET_ID
+					    WHERE T.TARGET_ID = #{target_id}
+					   UNION ALL
+					   SELECT C.GROUP_ID    AS GID,
+					            C.PARENT_ID   AS PID,
+					            C.NODE_ID     AS ID,
+					            CTE.CID       AS CID,
+					            C.TARGET_ID   AS TID,
+					            CONCAT(CTE.NAME , '>' , C.PATH) AS NAME,
+					            C.PATH        AS SHORTNAME,
+					            CONCAT(CTE.PATH , '>' , C.NODE_ID) AS PATH,
+					            CTE.LEVEL + 1 AS LEVEL,
+					            T.NAME        AS HOST,
+					            #C.OWNER       AS OWNER
+					            CONCAT(IFNULL(CTE.OWNER,''), IFNULL(C.OWNER,'')) AS OWNER
+					     FROM PI_SUBPATH C, CTE, PI_TARGETS T 
+					    WHERE C.TARGET_ID = #{target_id}
+					      AND C.PARENT_ID = CTE.ID 
+					      AND C.TARGET_ID = CTE.TID
+					      AND C.GROUP_ID  = CTE.GID 
+					      AND C.GROUP_ID  = T.GROUP_ID
+					      AND C.TARGET_ID = T.TARGET_ID
+					)
+					SELECT CTE.PATH, IFNULL(CTE.OWNER, '') OWNER, SUM(SM.MATCH_COUNT) CNT
+					FROM   PI_SUMMARY SM, CTE
+					WHERE  SM.TARGET_ID = #{target_id}
+					  AND  SM.TARGET_ID = CTE.TID
+					  AND  SM.OBJECT_ID = CTE.ID
+					GROUP BY CTE.PATH, IFNULL(CTE.OWNER, '')
+		    ) CT
+		WHERE  CT.CNT &lt;&gt; 0
+		ORDER BY CT.CNT DESC
+		<!--
+		SELECT A.PATH, A.OWNER, A.CNT
+		  FROM (
+		    SELECT C.PATH, IFNULL(C.OWNER, '') OWNER, SUM(A.MATCH_COUNT) CNT
+		     FROM PI_SUMMARY A, PI_SUBPATH B, PI_FIND C
+		     WHERE A.TARGET_ID = #{target_id}
+		       AND B.TARGET_ID = A.TARGET_ID
+		       AND B.NODE_ID = A.OBJECT_ID
+		       AND C.TARGET_ID = B.TARGET_ID
+		       AND C.HASH_ID = B.PARENT_ID
+		     GROUP BY C.PATH, IFNULL(B.OWNER, '')
+		     ) A
+		 WHERE A.CNT &lt;&gt; 0
+		 ORDER BY A.CNT DESC
+		 -->
+	</select>
+	
+</mapper>

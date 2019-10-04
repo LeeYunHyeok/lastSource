@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ScanMapper">
+
+	<!-- mybatis-config.xml의 typeAlias에 등록해두지 않았다면 <select id="selectMember" resultType="com.org.iopts.dto.MemberVO" > SELECT ID, PW ,NAME FROM TEST </select> 이렇게 해야 한다. -->
+
+	<select id="selectSchedules" parameterType="hashmap" resultType="hashmap">
+		SELECT SCH.SCHEDULE_ID, SCH.SCHEDULE_LABEL, SCH.SCHEDULE_STATUS, SCH.SCHEDULE_REPEAT_DAYS, SCH.SCHEDULE_REPEAT_MONTHS,
+          		SCH.SCHEDULE_TARGET_ID,
+          		CASE F_GET_SCH_TARGET_CNT(SCH.SCHEDULE_ID) WHEN 1 THEN LOWER(SCH.SCHEDULE_TARGET_NAME) ELSE CONCAT(F_GET_SCH_TARGET_CNT(SCH.SCHEDULE_ID), ' Targets') END AS SCHEDULE_TARGET_NAME, 
+          		(SELECT DATATYPE_LABEL FROM PI_DATATYPES WHERE DATATYPE_ID = SCH.SCHEDULE_DATATYPE_PROFILES) AS DATATYPE_LABEL,
+          		SCH.SCHEDULE_DATATYPE_PROFILES,
+          		SCH.SCHEDULE_NEXT_SCAN, 
+		      	DATE_FORMAT(FROM_UNIXTIME(SCH.SCHEDULE_NEXT_SCAN), '%Y-%m-%d %h:%i:%s') AS SCHEDULE_NEXT_SCAN_DATE,
+            	CASE SCH.SCHEDULE_STATUS WHEN 'scheduled' THEN DATE_FORMAT(FROM_UNIXTIME(SCH.SCHEDULE_NEXT_SCAN), '%Y-%m-%d %h:%i:%s') 
+                                     	WHEN 'scanning' THEN DATE_FORMAT(FROM_UNIXTIME(SCH.SCHEDULE_NEXT_SCAN), '%Y-%m-%d %h:%i:%s') 
+                                     	WHEN 'paused' THEN DATE_FORMAT(FROM_UNIXTIME(SCH.SCHEDULE_NEXT_SCAN), '%Y-%m-%d %h:%i:%s') 
+                                     	ELSE '' END  AS SCHEDULE_NEXT_SCAN_DATE_STATUS,
+          		SCH.SCHEDULE_CPU, SCH.SCHEDULE_CAPTURE, SCH.SCHEDULE_TRACE, SCH.SCHEDULE_PAUSE_DAYS, 
+          		SCH.SCHEDULE_PAUSE_TO, SCH.SCHEDULE_PAUSE_FROM 
+     	  FROM PI_SCHEDULES SCH
+     	 WHERE 1 = 1
+     	   <if test="fromDate != null and fromDate != ''">
+     	   AND SCHEDULE_NEXT_SCAN BETWEEN UNIX_TIMESTAMP(CONCAT(#{fromDate},' 00:00:00')) AND UNIX_TIMESTAMP(CONCAT(#{toDate},' 23:59:59'))
+           </if>
+     	   <if test="searchType != null and searchType.size != 0">
+     	   AND SCH.SCHEDULE_STATUS IN
+			<foreach collection="searchType" item="item" index="index" separator="," open="(" close=")">
+				#{item}
+			</foreach>
+           </if>
+           <if test="hostName != null and hostName != ''">
+           AND SCH.SCHEDULE_ID IN (SELECT SCH_ID FROM PI_SCHEDULED_LOCATION WHERE TARGET_ID IN (SELECT TARGET_ID FROM PI_TARGETS WHERE NAME LIKE CONCAT('%', #{hostName}, '%')))
+           </if>
+		 ORDER BY SCHEDULE_NEXT_SCAN DESC, SCHEDULE_STATUS DESC, SCHEDULE_LABEL
+	</select>
+
+	<select id="selectSchedule" resultType="com.org.iopts.dto.Pi_ScheduleVO">
+		SELECT schedule_id,schedule_label,schedule_status,schedule_repeat_days,schedule_repeat_months,schedule_target_id,schedule_datatype_profiles,
+		schedule_next_scan, FROM_UNIXTIME(schedule_next_scan) AS schedule_next_datescan, schedule_target_name, schedule_cpu,schedule_capture, schedule_trace, schedule_pause_days, schedule_pause_to,
+		schedule_pause_from FROM pi_schedules WHERE schedule_status='scheduled' OR schedule_status=#{schedule_status} ORDER BY schedule_status='scheduled' DESC,schedule_label
+	</select>
+
+	<select id="selectScanHost" resultType="com.org.iopts.dto.Pi_Scan_HostVO">
+		SELECT T.target_id, T.name, L.location_id, L.description FROM pi_targets T, pi_locations L WHERE T.target_id = L.target_id ORDER BY
+		T.target_id,L.description
+	</select>
+
+	<select id="selectDataTypes" parameterType="hashmap" resultType="hashmap">
+		SELECT DATATYPE_ID, DATATYPE_LABEL, VERSION
+     	  FROM PI_DATATYPES
+     	 WHERE DATATYPE_ID IN 
+		<foreach collection="DATATYPE" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+	</select>
+
+	<update id="changeSchedule" parameterType="hashmap">
+		UPDATE PI_SCHEDULES
+		   SET SCHEDULE_STATUS = #{SCHEDULE_STATUS}
+     	 WHERE SCHEDULE_ID = #{SCHEDULE_ID}
+	</update>
+	
+	<select id="selectLocationList" parameterType="hashmap" resultType="hashmap">
+		SELECT A.GROUP_ID, A.TARGET_ID, A.LOCATION_ID, A.NAME, A.PATH, A.LEVEL
+		  FROM (
+		    SELECT A.GROUP_ID, A.TARGET_ID, '' AS LOCATION_ID, LOWER(A.NAME) AS NAME, LOWER(A.NAME) AS PATH, 1 AS LEVEL
+		      FROM PI_TARGETS A
+           <if test='user_no != null and user_no != ""'>
+           		, PI_TARGET_USER B
+             WHERE B.USER_NO = #{user_no}
+               AND B.TARGET_ID = A.TARGET_ID
+           </if>
+		    UNION ALL
+		    SELECT A.GROUP_ID, A.TARGET_ID, A.LOCATION_ID, A.DESCRIPTION AS NAME, CONCAT(LOWER(B.NAME), '>', A.DESCRIPTION) AS PATH, 2 AS LEVEL
+		      FROM PI_LOCATIONS A, PI_TARGETS B
+           <if test='user_no != null and user_no != ""'>
+           		, PI_TARGET_USER U
+           </if>
+	         WHERE A.DESCRIPTION != 'All local process memory'
+	           AND A.DESCRIPTION != 'All local shadow volumes'
+               AND A.GROUP_ID = B.GROUP_ID
+               AND A.TARGET_ID = B.TARGET_ID
+           <if test='user_no != null and user_no != ""'>
+               AND U.USER_NO = #{user_no}
+               AND U.TARGET_ID = A.TARGET_ID
+           </if>
+		      ) A
+		 ORDER BY A.PATH, A.GROUP_ID, A.TARGET_ID, A.LOCATION_ID, LOWER(A.NAME)
+	</select>
+	
+	<select id="selectDatatypeList" parameterType="hashmap" resultType="hashmap">
+	    SELECT A.DATATYPE_LABEL, A.VERSION, @ROW := @ROW + 1 AS RNUM
+    	  FROM (
+				SELECT A.DATATYPE_LABEL, MAX(A.VERSION) AS VERSION
+		  		  FROM PI_DATATYPES A
+     			 GROUP BY A.DATATYPE_LABEL
+     			) A, (select @row := 0 AS ROW) B
+	</select>
+	
+	<select id="selectDatatypeVersion" parameterType="String" resultType="hashmap">
+     	SELECT DATATYPE_LABEL, VERSION, DATATYPE_ID
+       	  FROM PI_DATATYPES
+      	 WHERE DATATYPE_LABEL = #{value}
+      	 ORDER BY VERSION DESC
+	</select>	
+
+	<select id="viewScanHistory" parameterType="hashmap" resultType="hashmap">
+		SELECT H.TARGET_ID, H.URI, T.NAME, DATE_FORMAT(H.start_time, '%Y-%m-%d') as DATE, H.INACCESS
+		  FROM pi_scan_history H, pi_targets T
+		 WHERE H.target_id = T.target_id
+		   AND H.target_id = #{target_id}
+	</select>
+	<select id="viewScanPolicy" parameterType="hashmap" resultType="hashmap">
+		SELECT *, DATE_FORMAT(regdate, '%Y-%m-%d') AS DATE
+ 		  FROM pi_scan_policy
+ 		<if test="idx != null and idx != ''">
+ 		 WHERE idx = #{idx}
+ 		</if>
+	</select>
+
+	<insert id="registPolicy" parameterType="hashmap">
+		INSERT INTO pi_scan_policy (policy_name, policy_version, regdate, comment, datatype_id, schedule_label, schedule_pause_days,
+				schedule_pause_from, schedule_pause_to, schedule_cpu, schedule_data, schedule_memory, schedule_trace, dmz, default_check)
+		VALUES (#{policy_name}, #{policy_version}, NOW(), #{comment}, #{datatype}, #{schedule_label}, #{schedule_pause_days},
+		#{schedule_pause_from}, #{schedule_pause_to}, #{schedule_cpu}, #{schedule_data}, #{schedule_memory}, #{schedule_trace}, #{dmz}, #{check})
+	</insert>
+	
+	<update id="resetDefaultPolicy" parameterType="String">
+		UPDATE pi_scan_policy 
+		   SET default_check = '0'
+	</update>
+	
+	<update id="updateDefaultPolicy" parameterType="hashmap" >
+		UPDATE pi_scan_policy 
+	       SET default_check = '1'
+		 WHERE idx = #{idx};
+	</update>
+	
+</mapper>
