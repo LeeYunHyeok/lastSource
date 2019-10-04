@@ -60,7 +60,7 @@
 .ui-jqgrid .ui-single-sort-desc {margin-top:-1px;height:18px;}
 .ui-jqgrid .ui-jqgrid-sortable {cursor:pointer;height:34px;padding-top: 11px;}
 .ui-jqgrid tr.ui-search-toolbar th { }
-
+.ui-search-input {width: 80%; padding-left: 10px;}
 .ui-jqgrid tr.ui-search-toolbar td > input { padding-right: 0px; width: 95%;}
 .ui-jqgrid tr.ui-search-toolbar select {}
 /* body */ 
