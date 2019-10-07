@@ -440,9 +440,14 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     background: #1898D2;
 }
 .btn_area button:hover{background: #006EB6; color: #fff;}
-.answerRadio {position: relative;}
+.answerRadio {position: relative; display:none;}
+.answerRadio label {
+	padding-left:25px;
+	position: relative;
+	cursor:pointer;
+}
 
-.answerRadio::before {
+.answerRadio label::before {
     position: absolute;
     content: '정탐';
     display:inline-block;
@@ -460,7 +465,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     border-radius :3px;
 }
 .wrongRadio{position: relative;}
-.wrongRadio:before {
+.wrongRadio::before {
     position: absolute;
     content: "오탐";
     display:inline-block;
