@@ -441,8 +441,8 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 }
 .btn_area button:hover{background: #006EB6; color: #fff;}
 .answerRadio {position: relative;}
-.answerRadio[type=radio]::before,
-.answerRadio[type=checkbox]::before {
+
+.answerRadio::before {
     position: absolute;
     content: '정탐';
     display:inline-block;
@@ -459,7 +459,6 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     border-right: 1px solid #006EB6;
     border-radius :3px;
 }
-
 .wrongRadio{position: relative;}
 .wrongRadio:before {
     position: absolute;
