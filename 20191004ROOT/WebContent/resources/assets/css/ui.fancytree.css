@@ -332,6 +332,7 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
 }
 #main_graph>div {
 	min-width: 58vw;
+	max-width: 58vw !important;
 	width: 58vw !important;
 }
 
@@ -353,7 +354,7 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
     left: 0px;
     top: 0px;
     width: 33vw !important;
-    height: 29vw !important;
+    height: 39vw !important;
     /* font-size: .9vw; */
     user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
