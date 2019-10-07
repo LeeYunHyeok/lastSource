@@ -63,7 +63,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .connect{color: #62d424; padding: 0;}
 .diconnect{color: #dd2334; padding: 0;}
 .chart_box td img{float: left; padding-right: 15px;}
-.target_tit{font-size: 13px; color: #777;}
+.target_tit{font-size: 13px; color: #333;}
 .target_info{font-size: 16px; font-weight: 400; color: #222; margin-top: 5px;}
 
 
@@ -303,7 +303,11 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .left_area2 .user_info tr:nth-child(1) {border-bottom: 2px solid #ddd;}
 .user_info tr{border-bottom: 2px solid #006EB6;}
 .user_info td,.user_info th{height: 55px; padding: 17px 12px; text-align: left;}
-.user_info th{font-weight: 700 ;background-color: #d6e4ed; }
+.user_info th {
+    font-weight: 700;
+    background-color: #006EB6;
+    color: #fff;
+}
 .user_info td{color: #222;}
 .user_info td .user_name{font-size: 18px; margin-top: 8px;}
 .user_info td .user_name em{font-size: 14px;}

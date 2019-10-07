@@ -637,6 +637,10 @@ ul.ui-fancytree .fancytree-lastsib .fancytree-folder .fancytree-title {
 
 ul.ui-fancytree.fancytree-container.fancytree-plain li.fancytree-lastsib:first-of-type {
 	height: 35px;
+	border-bottom: 2px solid #004cb6;
+}
+.chart_box tr:first-of-type td {
+	 height: 35px;
 	 border-bottom: 2px solid #004cb6;
 }
    
