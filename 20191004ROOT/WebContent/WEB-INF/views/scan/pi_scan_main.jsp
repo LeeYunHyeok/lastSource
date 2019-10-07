@@ -63,9 +63,9 @@
 								<button type="button" id="btnScanRegist" class="btn_new">신규스캔등록</button>
 							</div>
 						</div>
-						<div class="left_box2" style="height: 732px; max-height: 732px; overflow: hidden; width:55vw;">
-    						<table id="targetGrid" style="width:55vw;"></table>
-    						<div id="targetGridPager" style="width:55vw;"></div>
+						<div class="left_box2" style="height: 732px; max-height: 732px; overflow: hidden; width:56vw;">
+    						<table id="targetGrid" style="width:56vw;"></table>
+    						<div id="targetGridPager" style="width:56vw;"></div>
 						</div>
 					</div>
 				</div>
