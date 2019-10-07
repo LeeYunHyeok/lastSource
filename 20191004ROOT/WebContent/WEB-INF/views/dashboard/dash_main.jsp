@@ -157,7 +157,7 @@ h3 {
 											},
 											saveAsImage : {
 												show : true,
-												width: '2vw';
+												width: '2vw',
 												title : '이미지로저장',
 												leng : ['저장']
 											},
