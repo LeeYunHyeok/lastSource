@@ -26,7 +26,7 @@
 					<div class="location_area">
 						<p class="location">스캔관리 > 스캔 스케쥴</p>
 					</div>
-					<div class="left_area2">
+					<div class="left_area2 width_17">
 						<h3>스캔 스케줄 검색</h3>
 							<div class="scan_left">
 								<div class="sch_left">
@@ -55,7 +55,7 @@
 						</div>
 
 
-					<div class="grid_top" style="margin-left: 350px;">
+					<div class="grid_top" style="margin-left: 20vw;">
 						<h3>스케줄 리스트</h3>
 						<div class="list_sch">
 							<div class="sch_area">
@@ -63,8 +63,8 @@
 								<button type="button" id="btnScanRegist" class="btn_new">신규스캔등록</button>
 							</div>
 						</div>
-						<div class="left_box2" style="height: 732px; max-height: 732px; overflow: hidden;">
-    						<table id="targetGrid"></table>
+						<div class="left_box2" style="height: 732px; max-height: 732px; overflow: hidden; width:55vw;">
+    						<table id="targetGrid" style="width:55vw;"></table>
     						<div id="targetGridPager"></div>
 						</div>
 					</div>
