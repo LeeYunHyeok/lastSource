@@ -339,7 +339,7 @@ h3 {
 									        text: '시스템현황',
 									        x:'center',
 									        textStyle: {
-												fontFamily: 'KBFGText',
+												fontFamily: 'S-CoreDream-5Medium',
 												fontSize: 20
 											}
 									    },
@@ -353,7 +353,7 @@ h3 {
 									        data:['오류','검색중','조치완료','대기', '일시정지']
 									    },
 										textStyle: {
-											fontFamily: 'KBFGText',
+											fontFamily: 'S-CoreDream-5Medium',
 											fontSize: 16
 										},
 									    series : [
