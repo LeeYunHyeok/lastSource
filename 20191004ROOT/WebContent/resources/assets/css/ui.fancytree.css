@@ -340,7 +340,7 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
 	position: absolute;
     left: 0px;
     top: 0px;
-    width: 89% !important;
+    width: 100% !important;
     height: auto !important;
     user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -351,6 +351,7 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
 #main_graph canvas[data-zr-dom-id="zr_0"] textarea {
 	font-size: .7vw !important;
 }
+.toolbox
 #circleGraph canvas[data-zr-dom-id="zr_0"] {
 	position: absolute;
     left: 0px;
