@@ -16,7 +16,7 @@ h3 {
 
 				<!-- left list-->
 				<div class="left_area">
-					<h3 class="serverListB" style="position: relative; padding-left: 37px;"> 서버리스트(농협은행)</h3>
+					<h3 class="serverListNh" style="position: relative; padding-left: 37px;"> 서버리스트(농협은행)</h3>
 					<div class="left_box">
 						<div class="left_list">
 						   <div id="tree">
