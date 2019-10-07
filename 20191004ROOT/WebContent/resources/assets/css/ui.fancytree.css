@@ -361,6 +361,9 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
     margin: 0px;
     border-width: 0px;
 }
+canvas {
+	font-family:'S-CoreDream-5Medium',dotum,'µ¸¿ò',sans-serif;
+}
 /*------------------------------------------------------------------------------
  * 'table' extension
  *----------------------------------------------------------------------------*/
