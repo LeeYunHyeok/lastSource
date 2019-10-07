@@ -116,8 +116,7 @@ $(document).ready(function () {
 			<div class="user">
 				<%-- ${memberInfo.TEAM_NAME} <em>${memberInfo.USER_NAME} </em>${memberInfo.JIKGUK} --%>
 				${memberInfo.OFFICE_NM} <em>${memberInfo.USER_NAME} </em>${memberInfo.JIKGUK}
-				<img class="Logout" src="${pageContext.request.contextPath}/resources/assets/images/btn_setting.png" id="btnLogout" title="Log-Out">
-
+				<img class="logOutImg" src="${pageContext.request.contextPath}../../resources/assets/images/lock.png" id="btnLogout" title="Log-Out">
 			</div>
 		</div>
 		
