@@ -331,17 +331,14 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
     min-width: 58vw;
 }
 .main_graph>div {
-	min-width: 58vw 
+	min-width: 58vw;
+	width: 58vw !important;
 }
-.main_graph > div > canvas {
-	
-}
+
 canvas[data-zr-dom-id="zr_0"] {
 	position: absolute;
     left: 0px;
     top: 0px;
-    max-width: 58vw !important;
-    min-width: 57vw !important;
     width: 57vw !important;
     height: 35vw !important;
     /* font-size: .9vw; */
