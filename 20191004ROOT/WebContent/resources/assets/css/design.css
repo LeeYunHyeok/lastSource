@@ -542,7 +542,8 @@ input[type="date"]{height: 30px; width: 156px; padding-right: 7px; background: u
 .left_area2.width_17 input[type="date"]{ width: 8.5vw; }
 input[type="date"]::-webkit-inner-spin-button {display: none;}
 input[type="date"][type="date"]::-webkit-calendar-picker-indicator {opacity: 0;}
-.left_box2.width_17 table td { font-size:.85vw !important; }
+.left_box2.width_17 table td,
+.left_box2.width_17 table th { font-size:.85vw !important; }
 /** 전체메뉴 목록 - index.html **/
 .all_menu{margin-top: 20px; margin-left: 20px;width: 300px; border}
 .all_menu dt, .all_menu dd{width: 100%;}
