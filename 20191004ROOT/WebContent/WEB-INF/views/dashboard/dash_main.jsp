@@ -80,7 +80,7 @@ h3 {
 					        <option value="year" selected>1년 전</option>
 					      </select>
 					    </div>
-					    <div class="chart_box width_57" style="height: 460px;">
+					    <div class="chart_box width_57" style="height: 35vw;">
 					      <div id="main_graph" style="height: 34vw; width: 57vw;"></div>
 							<script type="text/javascript">
 						<!-- 첫번째 개인정보 유형 그래프 -->
