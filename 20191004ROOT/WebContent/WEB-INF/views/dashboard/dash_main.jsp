@@ -114,7 +114,7 @@ h3 {
 										text : '4대 개인정보 유형',
 										subtext : '리스트',
 										textStyle : {
-											fontFamily: 'KBFGText',
+											fontFamily: 'S-CoreDream-5Medium',
 											fontSize : '1vw',
 											color : '#5d4fff'
 										},
@@ -134,7 +134,7 @@ h3 {
 									toolbox : {
 										show : true,
 										textStyle: {
-											fontFamily: 'KBFGText',
+											fontFamily: 'S-CoreDream-5Medium',
 											fontSize: '1vw'
 										},
 										feature : {
