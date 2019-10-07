@@ -27,7 +27,7 @@
 						<p class="location">스캔관리 > 스캔 스케쥴</p>
 					</div>
 					<div class="left_area2 width_17">
-						<h3>스캔 스케줄 검색</h3>
+						<h3 style="padding-left:0; text-align:center;">스캔 스케줄 검색</h3>
 							<div class="scan_left">
 								<div class="sch_left">
 									<input type="text" id="searchHost" value="" class="edt_sch">
@@ -63,9 +63,9 @@
 								<button type="button" id="btnScanRegist" class="btn_new">신규스캔등록</button>
 							</div>
 						</div>
-						<div class="left_box2" style="height: 732px; max-height: 732px; overflow: hidden; width:57vw;">
-    						<table id="targetGrid" style="width:57vw;"></table>
-    						<div id="targetGridPager" style="width:57vw;"></div>
+						<div class="left_box2" style="height: 732px; max-height: 732px; overflow: hidden; width:59vw;">
+    						<table id="targetGrid" style="width:58vw;"></table>
+    						<div id="targetGridPager" style="width:58vw;"></div>
 						</div>
 					</div>
 				</div>
