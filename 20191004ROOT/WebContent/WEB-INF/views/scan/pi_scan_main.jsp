@@ -55,7 +55,7 @@
 						</div>
 
 
-					<div class="grid_top" style="margin-left: 19vw;">
+					<div class="grid_top" style="margin-left: 17vw;">
 						<h3>스케줄 리스트</h3>
 						<div class="list_sch">
 							<div class="sch_area">
@@ -63,9 +63,9 @@
 								<button type="button" id="btnScanRegist" class="btn_new">신규스캔등록</button>
 							</div>
 						</div>
-						<div class="left_box2" style="height: 732px; max-height: 732px; overflow: hidden; width:56vw;">
-    						<table id="targetGrid" style="width:56vw;"></table>
-    						<div id="targetGridPager" style="width:56vw;"></div>
+						<div class="left_box2" style="height: 732px; max-height: 732px; overflow: hidden; width:57vw;">
+    						<table id="targetGrid" style="width:57vw;"></table>
+    						<div id="targetGridPager" style="width:57vw;"></div>
 						</div>
 					</div>
 				</div>
