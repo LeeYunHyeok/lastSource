@@ -81,7 +81,7 @@ h3 {
 					      </select>
 					    </div>
 					    <div class="chart_box width_57" style="height: 460px;">
-					      <div id="main_graph" style="height: 100%; width: 100%;"></div>
+					      <div id="main_graph" style="height: 34vw; width: 57vw;"></div>
 							<script type="text/javascript">
 						<!-- 첫번째 개인정보 유형 그래프 -->
 							function resizeGraph_One(result, status, ansyn) {
