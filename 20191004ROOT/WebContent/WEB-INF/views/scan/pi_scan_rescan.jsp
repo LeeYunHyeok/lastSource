@@ -36,7 +36,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="left_box2"
+			<div class="left_box2 heightM"
 				style="overflow: hidden; max-height: 700px; height: 700px;">
 				<table id="targetGrid"></table>
 			</div>
