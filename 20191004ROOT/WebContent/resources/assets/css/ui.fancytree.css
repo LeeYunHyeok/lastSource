@@ -75,6 +75,7 @@ ul.fancytree-container ul > li:before {
 }
 ul.fancytree-container li {
   list-style-image: none;
+  padding-bottom: 30px;
   list-style-position: outside;
   list-style-type: none;
   -moz-background-clip: border;
@@ -119,7 +120,7 @@ span.fancytree-drag-helper-img,
   width: 10pt;
   height: 10pt;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   background-repeat: no-repeat;
   background-position: left;
   background-position: 0pt 0pt;
@@ -232,6 +233,7 @@ span.fancytree-node {
 span.fancytree-title {
   color: #000;
   cursor: pointer;
+  font-size: 0.95vw;
   display: inline-block;
   vertical-align: top;
   min-height: 10pt;
@@ -525,7 +527,7 @@ ul.fancytree-ext-wide span.fancytree-node span.fancytree-title {
  * This section is automatically generated from the `ui-fancytree.less` template.
  ******************************************************************************/
 ul.fancytree-container ul {
-  padding: 0.3em 0 0 1em;
+  padding: 0.3em 0 0 0;
   margin: 0;
 }
 /*******************************************************************************
