@@ -325,19 +325,19 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
   background-image: none;
 }
 .chart_box.width_57 {
-	width: 58.5vw;
+	min-width: 58.5vw;
 }
 .width80 {
-    width: 58vw;
+    min-width: 58vw;
 }
 .main_graph>div {
-	width: 58vw 
+	min-width: 58vw 
 }
 .main_graph>div>canvas {
 	position: absolute;
     left: 0px;
     top: 0px;
-    width: 58vw !important;
+    min-width: 58vw !important;
     height: 35vw !important;
     /* font-size: .9vw; */
     user-select: none;
