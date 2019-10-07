@@ -362,6 +362,18 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
     margin: 0px;
     border-width: 0px;
 }
+#bar_graph canvas[data-zr-dom-id="zr_0"]{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 34vw;
+    height: 39vw;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+    border-width: 0px;
+}
 canvas {
 	font-family:'S-CoreDream-5Medium',dotum,'µ¸¿ò',sans-serif;
 }

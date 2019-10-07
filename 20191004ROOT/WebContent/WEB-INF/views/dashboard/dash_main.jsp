@@ -115,7 +115,7 @@ h3 {
 										subtext : '리스트',
 										textStyle : {
 											fontFamily: 'KBFGText',
-											fontSize : '18',
+											fontSize : '15',
 											color : '#5d4fff'
 										},
 										show : false
