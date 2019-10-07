@@ -69,7 +69,7 @@ h3 {
 				<div class="chart_area">  
 					<h2 class="ir">차트정보</h2>
 					<ul>
-					  <li class="width75">
+					  <li class="width80">
 					   <h3>4대 개인정보 유형(30일추이)</h3>
 					    <div class="date">
 					      <select class="" id="days">

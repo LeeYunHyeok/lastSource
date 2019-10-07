@@ -45,8 +45,8 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .user_exception ul li a{color: #fff; size: 20px;}
 .chart_area{margin-left: 21vw;}
 .chart_area ul{}
-.chart_area li{float: left; padding-right: 50px; position: relative;}
-.chart_area li .date{position: absolute; right: 50px; top: 40px;}
+.chart_area li{float: left; padding-right: 1vw; position: relative;}
+.chart_area li .date{position: absolute; right: 17px; top: 40px;}
 .chart_area li .date select{width: 140px; height: 30px; border: 1px solid #ddd;}
 .chart_box{position: relative; font-family:'S-CoreDream-5Medium',dotum,'돋움',sans-serif; border: 1px solid #e7e6eb; background: #fff; padding: 10px; overflow: hidden;}
 .chart_box .btn_group{position: absolute; right: 0; top: 15px;}
