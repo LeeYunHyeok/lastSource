@@ -130,39 +130,7 @@ h3 {
 									legend : {
 										data : [ '주민등록번호', '외국인등록번호', '운전면허번호', '여권번호', '계좌번호', '카드번호' ]
 									},
-									// 상단 차트종류 옵션 버튼
-									toolbox : {
-										show : true,
-										textStyle: {
-											fontFamily: 'S-CoreDream-5Medium',
-											fontSize: '1vw'
-										},
-										feature : {
-											dataView : {
-												show : true,
-												readOnly : false,
-												title : '데이터'
-											},
-											magicType : {
-												show : true,
-												title: {
-										          line: '선형차트',
-										          bar: '막태차트',
-												},
-												type : [ 'line', 'bar' ]
-											}, 
-											restore : {
-												show : true,
-												title : '복원'
-											},
-											saveAsImage : {
-												show : true,
-												title : '이미지로저장',
-												leng : ['저장']
-											},
-											
-										}
-									},
+									
 									// 가로
 									xAxis : [ {
 										type : 'category',
@@ -197,6 +165,39 @@ h3 {
 										type : 'bar',
 										data : type6
 									} ]
+									// 상단 차트종류 옵션 버튼
+									toolbox : {
+										show : true,
+										textStyle: {
+											fontFamily: 'S-CoreDream-5Medium',
+											fontSize: '1vw'
+										},
+										feature : {
+											dataView : {
+												show : true,
+												readOnly : false,
+												title : '데이터'
+											},
+											magicType : {
+												show : true,
+												title: {
+										          line: '선형차트',
+										          bar: '막태차트',
+												},
+												type : [ 'line', 'bar' ]
+											}, 
+											restore : {
+												show : true,
+												title : '복원'
+											},
+											saveAsImage : {
+												show : true,
+												title : '이미지로저장',
+												leng : ['저장']
+											},
+											
+										}
+									},
 								});
 							}
 						</script>
