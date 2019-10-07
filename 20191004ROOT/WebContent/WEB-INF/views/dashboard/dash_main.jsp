@@ -437,7 +437,7 @@ h3 {
 									        containLabel: true
 									    },
 									    textStyle: {
-											fontFamily: 'KBFGText',
+											fontFamily: 'S-CoreDream-5Medium',
 											fontSize: 16
 										},
 									    xAxis: {
