@@ -347,6 +347,7 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
     padding: 0px;
     border-width: 0px;
     margin: 0px -2vw !important;
+    word-break:break-all !important;
 }
 #main_graph canvas[data-zr-dom-id="zr_0"] textarea {
 	font-size: .7vw !important;
