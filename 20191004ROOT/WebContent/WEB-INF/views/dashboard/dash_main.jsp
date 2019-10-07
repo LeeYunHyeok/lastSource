@@ -202,7 +202,7 @@ h3 {
 						</script>
 					    </div>
 					  </li>
-					  <li class="width25">
+					  <li style="width: 12vw;">
 					    <h3>타겟 정보</h3>
 					    <div class="chart_box">
 					      <table>

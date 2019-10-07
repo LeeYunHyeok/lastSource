@@ -325,17 +325,17 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
   background-image: none;
 }
 .chart_box.width_57 {
-	width: 57vw;
+	width: 58.5vw;
 }
 .width80 {
-    width: 54vw;
+    width: 58vw;
 }
 canvas {
 	position: absolute;
     left: 0px;
     top: 0px;
-    width: 57vw;
-    height: 30vw;
+    width: 58vw;
+    height: 35vw;
     /* font-size: .9vw; */
     user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
