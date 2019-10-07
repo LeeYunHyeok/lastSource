@@ -27,7 +27,14 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 /* dash board */
 .container_main h3{font-size: 20px; font-weight: 400; color: #000; line-height: 50px; margin-top: 30px;}
 .left_area{position: absolute; left: 50px; top: 0; bottom: 0; width: 300px;}
-.left_box{border: 1px solid #e7e6eb; padding: 10px 10px; background: #fff; height: calc( 100% - 486px ); overflow-y: auto;}
+.left_box {
+    /* border: 1px solid #e7e6eb; */
+    padding: 10px 10px;
+    /* background: #fff; */
+    background-color: #d6e4ed;
+    height: calc( 100% - 486px );
+    overflow-y: auto;
+}
 .left_list{height: 100%;}
 .left_list li{border-bottom: 1px solid #efeeeb;}
 .left_list li a{display: block; padding: 12px 7px;}
@@ -296,7 +303,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .left_area2 .user_info tr:nth-child(1) {border-bottom: 2px solid #ddd;}
 .user_info tr{border-bottom: 2px solid #006EB6;}
 .user_info td,.user_info th{height: 55px; padding: 17px 12px; text-align: left;}
-.user_info th{background: #006EB6; font-weight: 700;}
+.user_info th{font-weight: 700 ;background-color: #d6e4ed; }
 .user_info td{color: #222;}
 .user_info td .user_name{font-size: 18px; margin-top: 8px;}
 .user_info td .user_name em{font-size: 14px;}
