@@ -330,12 +330,12 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
 .width80 {
     min-width: 58vw;
 }
-.main_graph>div {
+#main_graph>div {
 	min-width: 58vw;
 	width: 58vw !important;
 }
 
-canvas[data-zr-dom-id="zr_0"] {
+#main_graph canvas[data-zr-dom-id="zr_0"] {
 	position: absolute;
     left: 0px;
     top: 0px;
