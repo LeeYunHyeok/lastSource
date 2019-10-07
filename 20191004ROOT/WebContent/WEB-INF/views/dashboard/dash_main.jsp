@@ -135,7 +135,7 @@ h3 {
 										show : true,
 										textStyle: {
 											fontFamily: 'KBFGText',
-											fontSize: 1vw
+											fontSize: '1vw'
 										},
 										feature : {
 											dataView : {
