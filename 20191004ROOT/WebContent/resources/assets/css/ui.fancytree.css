@@ -340,7 +340,7 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
 	position: absolute;
     left: 0px;
     top: 0px;
-    width: 100% !important;
+    width: 89% !important;
     height: auto !important;
     user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
