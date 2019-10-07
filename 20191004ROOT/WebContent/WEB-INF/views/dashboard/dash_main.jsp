@@ -204,7 +204,7 @@ h3 {
 					  </li>
 					  <li style="width: 12vw;">
 					    <h3>타겟 정보</h3>
-					    <div class="chart_box">
+					    <div class="chart_box" style="background: #fefff0;">
 					      <table>
 					        <tr>
 					          <td>
