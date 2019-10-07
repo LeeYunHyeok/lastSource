@@ -348,7 +348,7 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
     border-width: 0px;
     margin: 0px -2vw !important;
 }
-#main_graph canvas[data-zr-dom-id="zr_0"] input,select,textarea,button {
+#main_graph canvas[data-zr-dom-id="zr_0"] textarea {
 	font-size: .7vw !important;
 }
 #circleGraph canvas[data-zr-dom-id="zr_0"] {

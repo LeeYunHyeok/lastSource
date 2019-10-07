@@ -13,7 +13,7 @@ input::-moz-placeholder {color: #b1b3b5;}
 input,select{height: 30px;}
 button{border:0 none;background-color:transparent;cursor:pointer;}
 body{background:#fff;direction:ltr;-webkit-text-size-adjust:none}
-body,th,td,input,select,textarea,button{font-size:.7vw; font-family: 'S-CoreDream-5Medium',dotum,'돋움',sans-serif;font-weight:100;color:#444;}
+body,th,td,input,select,textarea,button{font-size:14px; font-family: 'S-CoreDream-5Medium',dotum,'돋움',sans-serif;font-weight:100;color:#444;}
 .os_mac body,.os_mac th,.os_mac td,.os_mac input,.os_mac select,.os_mac textarea,.os_mac button{letter-spacing:0}
 a{color:#666;text-decoration:none}
 a:hover{color:#000;text-decoration:underline}
