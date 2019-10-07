@@ -164,7 +164,7 @@ h3 {
 										name : '카드번호',
 										type : 'bar',
 										data : type6
-									} ]
+									} ],
 									// 상단 차트종류 옵션 버튼
 									toolbox : {
 										show : true,
