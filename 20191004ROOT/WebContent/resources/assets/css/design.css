@@ -441,7 +441,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 }
 .btn_area button:hover{background: #006EB6; color: #fff;}
 .answerLabel {position: relative; cursor:pointer;}
-.answerRadio, wrongRadio { opacity:0;}
+.answerRadio, .wrongRadio { opacity:0;}
 .answerLabel::before {
     position: absolute;
     content: '정탐';
