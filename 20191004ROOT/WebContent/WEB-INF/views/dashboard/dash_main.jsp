@@ -115,7 +115,7 @@ h3 {
 										subtext : '리스트',
 										textStyle : {
 											fontFamily: 'KBFGText',
-											fontSize : '15',
+											fontSize : '1vw',
 											color : '#5d4fff'
 										},
 										show : false
@@ -135,7 +135,7 @@ h3 {
 										show : true,
 										textStyle: {
 											fontFamily: 'KBFGText',
-											fontSize: 14
+											fontSize: 12
 										},
 										feature : {
 											dataView : {
