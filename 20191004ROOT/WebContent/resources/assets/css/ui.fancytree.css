@@ -62,7 +62,6 @@ ul.fancytree-container {
   white-space: nowrap;
   padding: 3px;
   margin: 0;
-  border: 0px dotted gray;
   min-height: 0%;
   position: relative;
   outline:none;
@@ -579,6 +578,7 @@ ul.ui-fancytree .fancytree-lastsib .fancytree-folder .fancytree-title {
 
 ul.ui-fancytree.fancytree-container.fancytree-plain li.fancytree-lastsib:first-of-type {
 	height: 35px;
+	 border-bottom: 2px solid #004cb6;
 }
    
 ul.ui-fancytree.fancytree-container.fancytree-plain li.fancytree-lastsib:first-of-type span span:first-of-type {
