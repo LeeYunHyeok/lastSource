@@ -440,12 +440,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     background: #1898D2;
 }
 .btn_area button:hover{background: #006EB6; color: #fff;}
-.answerRadio {position: relative; display:none;}
-.answerRadio label {
-	padding-left:25px;
-	position: relative;
-	cursor:pointer;
-}
+.answerRadio {position: relative;}
 
 .answerRadio label::before {
     position: absolute;
