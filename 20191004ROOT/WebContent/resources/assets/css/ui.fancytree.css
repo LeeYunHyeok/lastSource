@@ -324,7 +324,13 @@ ul.fancytree-container.fancytree-rtl li.fancytree-lastsib,
 ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
   background-image: none;
 }
-.main_graph canvas {
+.chart_box.width_57 {
+	width: 57vw;
+}
+.width80 {
+    width: 54vw;
+}
+canvas {
 	position: absolute;
     left: 0px;
     top: 0px;
