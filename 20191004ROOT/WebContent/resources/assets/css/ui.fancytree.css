@@ -643,7 +643,11 @@ ul.ui-fancytree.fancytree-container.fancytree-plain li.fancytree-lastsib:first-o
 	 height: 35px;
 	 border-bottom: 2px solid #004cb6;
 }
-.squareBox tr td:first-chlid { width: 10vw; font-size: .9vw; }  
+.chart_box .squareBox tr:first-of-type td {
+	 height: 35px;
+	 border-bottom: 2px solid #ddd;
+}
+.chart_box .squareBox tr:first-of-type td { width: 10vw; font-size: .9vw; }  
 ul.ui-fancytree.fancytree-container.fancytree-plain li.fancytree-lastsib:first-of-type span span:first-of-type {
 	display: none;
 } 
