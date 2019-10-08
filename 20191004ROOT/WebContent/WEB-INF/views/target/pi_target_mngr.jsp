@@ -92,7 +92,7 @@
 									<th class="borderB">CORE</th>
 									<td id="agent_core">-</td>
 									<th class="borderB">연결상태</th>
-									<td id="agent_connected"><span class="diconnect">-</span></td>
+									<td id="agent_connected" style="background-position: 36% 50%;"><span class="diconnect">-</span></td>
 								</tr>
 								<tr>
 									<th>RAM</th>
