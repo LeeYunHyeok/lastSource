@@ -43,9 +43,9 @@
 							<tr>
 								<td><h3>서버 담당자</h3></td>
 								<td class="btn_area" style="text-align: right; padding: 0px; width: 29vw;">
-									<button type="button" id="btnUpload" style="margin: 0px;">업로드</button>
-									<button type="button" id="btnDownloadExel" style="margin: 0px;">다운로드</button>
-									<button type="button" id="btnRegistTargetUser" style="margin: 0px;"> 담당자등록 </button>
+									<button type="button" id="btnUpload" style="margin: 0px; padding: 0 30px;">업로드</button>
+									<button type="button" id="btnDownloadExel" style="margin: 0px; padding: 0 30px;">다운로드</button>
+									<button type="button" id="btnRegistTargetUser" style="margin: 0px; padding: 0 30px;"> 담당자등록 </button>
 									<input class=""  type="file" name="uploadFile" id="uploadFile" onchange="uploadSave();" style="display:none;">
 								</td>
 							</tr>
