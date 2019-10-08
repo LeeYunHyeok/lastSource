@@ -1135,7 +1135,7 @@ function loadTargetGrid(oGrid)
             type    : "POST",
             async   : true
         },
-        colNames:['','경 로','호스트','소유자','주민번호','외국인번호','여권번호','운전번호','계좌번호','카드번호','합계','처리상태','처리상태코드','처리분류코드','처리분류코드명','(하위포함)결재상태','(하위포함)결재분류','LEVEL','ID','PID'],
+        colNames:['','경 로','호스트','소유자','주민</br>번호','외국인번호','여권번호','운전번호','계좌번호','카드번호','합계','처리상태','처리상태코드','처리분류코드','처리분류코드명','(하위포함)결재상태','(하위포함)결재분류','LEVEL','ID','PID'],
         colModel: [
             { index: 'CHK',             name: 'CHK',            width: 35,  align: 'center', editable: true, edittype: 'checkbox', classes: 'pointer',
                 editoptions: { value: "1:0" }, formatoptions: { disabled: false }, formatter: createCheckbox, sortable: false},
