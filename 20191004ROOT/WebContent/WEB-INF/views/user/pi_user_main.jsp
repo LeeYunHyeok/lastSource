@@ -47,7 +47,7 @@
 										<img src="${pageContext.request.contextPath}/resources/assets/images/user_icon.png" alt="">
 										<p class="user_name">${memberInfo.USER_NAME}<em>(${memberInfo.JIKGUK})</em></p>
 									</td>
-									<th>사용자 번호</th>
+									<th style="border-bottom: 2px solid #ddd;">사용자 번호</th>
 									<td>${memberInfo.USER_NO}</td>
 									<th class="btn_area2">비밀번호
 										<button class="margin_reset" type="button" id="btnChangePwd" style="margin-left: 20px;">비밀번호변경</button>
