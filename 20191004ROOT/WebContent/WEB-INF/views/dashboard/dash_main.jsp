@@ -418,6 +418,7 @@ h3 {
 									echartbar.setOption({
 									 title: {
 									        text: '급등서버순위',
+									        left: 0,
 									        textStyle: {
 												fontSize: 20
 											}
