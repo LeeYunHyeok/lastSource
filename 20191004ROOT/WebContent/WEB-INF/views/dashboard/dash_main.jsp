@@ -316,7 +316,7 @@ h3 {
 					</ul>
 					<ul>  
 						<li style="margin-top: 40px; margin-bottom: 20px; width: 100%;" > 
-							<div class="chart_box" style="height: 560px;">
+							<div class="chart_box" style="height: 560px; background: #fefff0;">
 								<div id=circleGraph style="height: 100%; width: 50%; float: left;"></div>
 								<script type="text/javascript"> 
 								<!-- 원그래프  -->
