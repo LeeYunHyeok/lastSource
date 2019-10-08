@@ -139,11 +139,13 @@ h3 {
 									} ],
 									// 세로
 									yAxis : [ {
-										type : 'value'
+										type : 'value',
+										
 									} ],
 									series : [ {
 										name : '주민등록번호',
 										type : 'bar',
+										color: '#DC143C',
 										data : type1
 									}, {
 										name : '외국인등록번호',
@@ -152,6 +154,7 @@ h3 {
 									}, {
 										name : '운전면허번호',
 										type : 'bar',
+										color: '#006EB6',
 										data : type3
 									}, {
 										name : '여권번호',
@@ -160,10 +163,13 @@ h3 {
 									}, {
 										name : '계좌번호',
 										type : 'bar',
+										color:'#FF8C00',
 										data : type5
 									}, {
 										name : '카드번호',
 										type : 'bar',
+										color:'#30a1ce',
+					
 										data : type6
 									} ],
 									// 상단 차트종류 옵션 버튼
