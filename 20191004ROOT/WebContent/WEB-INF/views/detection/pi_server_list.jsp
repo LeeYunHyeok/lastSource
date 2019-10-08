@@ -48,7 +48,7 @@
 					검색 : <input type="text" id="txt_host" value="" class="edt_sch" style="width: 263px;">
 					<button id="btn_search" class="btn_sch">검색</button>
 				</div>-->
-				<div class="left_box2" style="height: 732px; max-height: 732px; overflow: hidden;">
+				<div class="left_box2 minW" style="height: 732px; max-height: 732px; overflow: hidden;">
    					<table id="topNGrid"></table>
    					<div id="topNGridPager"></div>
    				</div>
