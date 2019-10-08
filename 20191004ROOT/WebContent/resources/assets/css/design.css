@@ -740,6 +740,7 @@ td.mxWindowPane button {
     padding: 0 10px;
     text-align: left;
 }
+.borderB { border-bottom: 2px solid #ddd; }
 .mxWindowPane .user_info tr{border-bottom: 0px solid #eee;}
 .mxWindowPane .user_info td.title {
 	font-size: 14px;

@@ -73,23 +73,23 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<th>서버이름</th>
+									<th class="borderB">서버이름</th>
 									<td id="HostName">-</td>
-									<th>IP</th>
+									<th class="borderB">IP</th>
 									<td id="agent_ip">-</td>
 								</tr>
 								<tr>
-									<th>OS</th>
+									<th class="borderB">OS</th>
 									<td id="PlatformName">-</td>
-									<th>버전</th>
+									<th class="borderB">버전</th>
 									<td id="AgentVer">-</td>
 								</tr>
 								<tr>
-									<th>CPU</th>
+									<th class="borderB">CPU</th>
 									<td colspan="3" id="agent_cpu">-</td>
 								</tr>
 								<tr>
-									<th>CORE</th>
+									<th class="borderB">CORE</th>
 									<td id="agent_core">-</td>
 									<th>연결상태</th>
 									<td id="agent_connected"><span class="diconnect">-</span></td>
