@@ -735,7 +735,12 @@ td.mxWindowPane button {
 .ui-widget-content li{padding: 5px 0;}
 .ui-widget-content li button{width: 110px;}
 
-.mxWindowPane .user_info td,.user_info th {height: 35px; padding: 0 10px; text-align: left;}
+.mxWindowPane .user_info td, .user_info th {
+    height: 35px;
+    padding: 0 10px;
+    border-bottom: 2px solid #ddd;
+    text-align: left;
+}
 .mxWindowPane .user_info tr{border-bottom: 0px solid #eee;}
 .mxWindowPane .user_info td.title {
 	font-size: 14px;
