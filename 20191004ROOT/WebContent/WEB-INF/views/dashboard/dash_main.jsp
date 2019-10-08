@@ -435,7 +435,7 @@ h3 {
 										legend : {
 											left: '27%',
 											data : [ '마지막 검색결과', '이전 검색 결과'],
-											color : ['#dc143c', '#30a1ce']
+											
 										},
 									    grid: {
 									        left: '3%',
@@ -459,11 +459,13 @@ h3 {
 									        {
 									            name: '마지막 검색결과',
 									            type: 'bar',
+									            color :'#dc143c', 
 									            data: total
 									        },
 									        {
 									            name: '이전 검색 결과',
 									            type: 'bar',
+									            color: '#30a1ce'
 									            data: total_pre
 									        }
 									    ]
