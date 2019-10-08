@@ -168,6 +168,7 @@ h3 {
 									// 상단 차트종류 옵션 버튼
 									toolbox : {
 										show : true,
+										bottom: 10,
 										textStyle: {
 											fontFamily: 'S-CoreDream-5Medium',
 											fontSize: '1vw'
