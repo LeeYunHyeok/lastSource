@@ -734,7 +734,9 @@ td.mxWindowPane button {
 .ui-widget-content ul{padding: 10px 20px;}
 .ui-widget-content li{padding: 5px 0;}
 .ui-widget-content li button{width: 110px;}
-
+#agent_connected {
+	 background-position: 36% 50% !important;"
+}
 .mxWindowPane .user_info td, .user_info th {
     height: 35px;
     padding: 0 10px;
