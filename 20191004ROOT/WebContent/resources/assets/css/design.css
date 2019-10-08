@@ -265,7 +265,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     left: 4px;
     width: 28px;
     height: 28px;
-    background: url(../images/list2-black.png) no-repeat center center;
+    background: url(../images/list1-black.png) no-repeat center center;
     background-size: contain;
 }
 .serverListMenu:before {
@@ -275,7 +275,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     left: 4px;
     width: 28px;
     height: 28px;
-    background: url(../images/list2-black.png) no-repeat center center;
+    background: url(../images/list3-black.png) no-repeat center center;
     background-size: contain;
 }
 .grid_top{position: relative;}
