@@ -60,7 +60,7 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="left_box2" style="overflow: hidden; max-height: 732px; height: 700px;">
+			<div class="left_box2 minW" style="overflow: hidden; max-height: 732px; height: 700px;">
   					<table id="processGrid"></table>
   					<div id="Pages"></div>
 			</div>
