@@ -81,7 +81,7 @@
 								<tr>
 									<th class="borderB">OS</th>
 									<td id="PlatformName">-</td>
-									<th class="borderB">버전</th>
+									<th>버전</th>
 									<td id="AgentVer">-</td>
 								</tr>
 								<tr>
@@ -91,7 +91,7 @@
 								<tr>
 									<th class="borderB">CORE</th>
 									<td id="agent_core">-</td>
-									<th>연결상태</th>
+									<th class="borderB">연결상태</th>
 									<td id="agent_connected"><span class="diconnect">-</span></td>
 								</tr>
 								<tr>
