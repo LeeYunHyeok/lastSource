@@ -363,7 +363,7 @@ h3 {
 									        {
 									            name: '시스템현황',
 									            type: 'pie',
-									            radius : ['45%', '70%'],
+									            radius : ['20%', '70%'],
 									            colorset : ['#000000', 'red'],
 									            center: '50%',
 									            data:[
