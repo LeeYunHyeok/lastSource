@@ -169,7 +169,7 @@ h3 {
 									toolbox : {
 										show : true,
 										bottom: 10,
-										right: 10,
+										right: 0,
 										textStyle: {
 											fontFamily: 'S-CoreDream-5Medium',
 											fontSize: '1vw'
