@@ -364,7 +364,7 @@ h3 {
 									            name: '시스템현황',
 									            type: 'pie',
 									            radius : ['45%', '70%'],
-									            color : ['#000000', 'red'],
+									            color : ['#000000', 'red', 'blue', 'green', 'yellow'],
 									            center: '50%',
 									            data:[
 									                {value:error, name:'오류'},
