@@ -741,7 +741,7 @@ td.mxWindowPane button {
     border-bottom: 2px solid #ddd;
     text-align: left;
 }
-.mxWindowPane .user_info td, .user_info th:last-child {
+.mxWindowPane .user_info td:last-child, .user_info th:last-child {
 	border-bottom: none;
 }
 .mxWindowPane .user_info tr{border-bottom: 0px solid #eee;}
