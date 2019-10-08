@@ -741,6 +741,9 @@ td.mxWindowPane button {
     border-bottom: 2px solid #ddd;
     text-align: left;
 }
+.mxWindowPane .user_info td, .user_info th:last-child {
+	border-bottom: none;
+}
 .mxWindowPane .user_info tr{border-bottom: 0px solid #eee;}
 .mxWindowPane .user_info td.title {
 	font-size: 14px;
