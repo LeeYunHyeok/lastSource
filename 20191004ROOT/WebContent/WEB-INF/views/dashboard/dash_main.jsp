@@ -214,7 +214,7 @@ h3 {
 					  </li>
 					  <li style="width: 12vw;">
 					    <h3>타겟 정보</h3>
-					    <div class="chart_box autoHeight" style="background: #d6e4ed;">
+					    <div class="chart_box" style="background: #d6e4ed;">
 					      <table>
 					        <tr>
 					          <td>
@@ -273,42 +273,42 @@ h3 {
 					<ul>
 					  <li class="width25" id="rrn_list">
 					    <h3>주민등록번호</h3>
-					    <div class="chart_box" style="height: 220px; overflow:auto; background: #fefff0;">
+					    <div class="chart_box autoHeight" style="height: 220px; overflow:auto; background: #fefff0;">
 					    	<table id="rrn_tbl" class="squareBox">
 					    	</table>
 					    </div>
 					  </li>
 					  <li class="width25" id="foreigner_list">
 					    <h3>외국인등록번호</h3>
-					    <div class="chart_box" style="height: 220px; overflow:auto; background: #fefff0;">
+					    <div class="chart_box autoHeight" style="height: 220px; overflow:auto; background: #fefff0;">
 					    	<table id="foreigner_tbl" class="squareBox">
 					    	</table>
 					    </div>
 					  </li>
 					  <li class="width25" id="driver_list">
 					    <h3>운전면허</h3>		
-					    <div class="chart_box" style="height: 220px; overflow:auto; background: #fefff0;">
+					    <div class="chart_box autoHeight" style="height: 220px; overflow:auto; background: #fefff0;">
 							<table id="driver_tbl" class="squareBox">
 					    	</table>
 					    </div>
 					  </li>
 					  <li class="width25" id="passport_list">
 					    <h3>여권번호</h3>
-					    <div class="chart_box" style="height: 220px; overflow:auto; background: #fefff0;">
+					    <div class="chart_box autoHeight" style="height: 220px; overflow:auto; background: #fefff0;">
 					    	<table id="passport_tbl" class="squareBox">
 					    	</table>
 					    </div>
 					  </li>
 					  <li class="width25" id="account_num_list">
 					    <h3>계좌번호</h3>
-					    <div class="chart_box" style="height: 220px; overflow:auto; background: #fefff0;">
+					    <div class="chart_box autoHeight" style="height: 220px; overflow:auto; background: #fefff0;">
 					    	<table id="account_num_tbl" class="squareBox">
 					    	</table>
 					    </div>
 					  </li>
 					  <li class="width25" id="card_num_list">
 					    <h3>카드번호</h3>
-					    <div class="chart_box" style="height: 220px; overflow:auto; background: #fefff0;">
+					    <div class="chart_box autoHeight" style="height: 220px; overflow:auto; background: #fefff0;">
 					    	<table id="card_num_tbl" class="squareBox">
 					    	</table>
 					    </div>

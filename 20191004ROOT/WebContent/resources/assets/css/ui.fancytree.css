@@ -639,7 +639,7 @@ ul.ui-fancytree.fancytree-container.fancytree-plain li.fancytree-lastsib:first-o
 	height: 35px;
 	border-bottom: 2px solid #004cb6;
 }
-.autoHeight.chart_box{ height: auto !important; }
+.autoHeight.chart_box{ height: auto !important; min-height :150px !important; }
 .chart_box tr:first-of-type td {
 	 height: 35px;
 	 border-bottom: 2px solid #004cb6;
@@ -648,7 +648,7 @@ ul.ui-fancytree.fancytree-container.fancytree-plain li.fancytree-lastsib:first-o
 	 height: 35px;
 	 border-bottom: 2px solid #ddd;
 }
-.chart_box .squareBox tr:first-of-type td { font-size: .9vw; }  
+.chart_box .squareBox tr td { font-size: .9vw; width: 8vw; }  
 ul.ui-fancytree.fancytree-container.fancytree-plain li.fancytree-lastsib:first-of-type span span:first-of-type {
 	display: none;
 } 
