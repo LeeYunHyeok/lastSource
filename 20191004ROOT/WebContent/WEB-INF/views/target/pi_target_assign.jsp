@@ -42,7 +42,7 @@
 						<table style="width: 100%;">
 							<tr>
 								<td><h3>서버 담당자</h3></td>
-								<td class="btn_area" style="text-align: right; padding: 0px;">
+								<td class="btn_area" style="text-align: right; padding: 0px; width: 29vw;">
 									<button type="button" id="btnUpload" style="margin: 0px;">업로드</button>
 									<button type="button" id="btnDownloadExel" style="margin: 0px;">다운로드</button>
 									<button type="button" id="btnRegistTargetUser" style="margin: 0px;"> 담당자등록 </button>
