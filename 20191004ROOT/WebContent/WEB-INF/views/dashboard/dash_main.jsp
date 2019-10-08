@@ -465,7 +465,7 @@ h3 {
 									        {
 									            name: '이전 검색 결과',
 									            type: 'bar',
-									            color: '#30a1ce'
+									            color: '#006eb6',
 									            data: total_pre
 									        }
 									    ]
