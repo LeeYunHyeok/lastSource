@@ -31,19 +31,19 @@
 					<div class="grid_top">
 						<h3>예외처리 승인</h3>
 					
-						<div class="select_area bold" style="float:left; width: 20vw">
+						<div class="select_area bold">
 							신청자 : 
-							<select id="userSelect" name="userSelect" style="width: 250px; min-width: 250px;">
+							<select id="userSelect" name="userSelect" style="position:absolute; font-size:.75vw; right: 43vw; width: 20vw">
 								<c:forEach items="${teamMemberList}" var="teamMemberList">
 				   				<option value="${teamMemberList.USER_NO}">${teamMemberList.USER_NAME} ${teamMemberList.JIKGUK} (${teamMemberList.USER_NO})</option>
 								</c:forEach>
 							</select>
 						</div>
 							
-						<div class="select_area bold" style="float:left; width: 20vw"">
+						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 43vw; width: 20vw">
 							<div class="radio_area">
 								Host : 
-								<select id="hostSelect" name="hostSelect">
+								<select id="hostSelect" name="hostSelect" style="min-width:12vw; font-size:.75vw">
 									<c:forEach items="${targetList}" var="targetList">
 				   					<option value="${targetList.TARGET_ID}"<c:if test="${targetList.TARGET_ID == target_id}">selected</c:if>>${targetList.AGENT_NAME} - ${targetList.AGENT_CONNECTED_IP}</option>
 									</c:forEach>
@@ -59,11 +59,11 @@
 							</div>
 						</div>
  -->
-						<div class="select_area bold" style="float:left; width: 20vw"">
+						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 43vw; width: 20vw">
 							<div class="radio_area">
-								<input type="date" id="fromDate" style="text-align: center;" readonly="readonly" value="${fromDate}" >
+								<input type="date" id="fromDate" style="text-align: center; width:8.5vw; font-size:.7vw;" readonly="readonly" value="${fromDate}" >
 								<span style="width: 8%; margin-right: 3px;">~</span>
-								<input type="date" id="toDate" style="text-align: center;" readonly="readonly" value="${toDate}" >
+								<input type="date" id="toDate" style="text-align: center; width:8.5vw; font-size:.7vw;" readonly="readonly" value="${toDate}" >
 							</div>
 						</div>
 						<div class="list_sch">
