@@ -31,9 +31,9 @@
 					<div class="grid_top">
 						<h3>예외 리스트</h3>
 					
-						<div class="select_area bold" style=" position: absolute; width: 15vw; top: 0; right: 43vw; font-size:.75vw">
+						<div class="select_area bold" style=" position: absolute; width: 19vw; top: 0; right: 39vw; font-size:.75vw">
 							Host : 
-							<select id="hostSelect" name="hostSelect" style=" width: 12vw; font-size:.75vw;">
+							<select id="hostSelect" name="hostSelect" style="min-width: 7vw !important; font-size:.75vw;">
 								<c:forEach items="${targetList}" var="targetList">
 				   				<option value="${targetList.TARGET_ID}"<c:if test="${targetList.TARGET_ID == target_id}">selected</c:if>>${targetList.AGENT_NAME} - ${targetList.AGENT_CONNECTED_IP}</option>
 								</c:forEach>
