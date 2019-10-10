@@ -47,7 +47,7 @@
 								<input type="radio" name="rdo_status" id="rdo003" value="W"><label for="rdo003">대기</label>
 							</div>
 						</div>
-						<div class="select_area bold" style=" position: absolute; right: 11.5vw; top: 0px; width: 14vw;">
+						<div class="select_area bold" style=" position: absolute; right: 9.5vw; top: 0px; width: 14vw;">
 							<div class="radio_area" style="margin:0;">
 								<input type="date" id="fromDate" style="width:6.2vw; padding-right: 19px; font-size:.7vw; text-align: center;" readonly="readonly" value="${fromDate}" >
 								<span style="width: 8%; margin-right: 3px;">~</span>
