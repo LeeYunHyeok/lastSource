@@ -81,7 +81,7 @@ String browser = "";
 String userAgent = request.getHeader("User-Agent");
 if (userAgent.indexOf("Trident") > 0 || userAgent.indexOf("MSIE") > 0) {
 %>
-	<div id="taskWindow" style="position:absolute; left: 650px; top: 350px; touch-action: none; width: 50%; height: 365px; z-index: 999; display:none; min-width: 30%; min-height: 200px;" class="ui-widget-content">
+	<div id="taskWindow" style="position:absolute; left: 650px; top: 350px; touch-action: none; width: 70%; height: 365px; z-index: 999; display:none; min-width: 30%; min-height: 200px;" class="ui-widget-content">
 	<table class="mxWindow" style="width: 100%; height: 100%;">
 	<tbody>
 		<tr>
