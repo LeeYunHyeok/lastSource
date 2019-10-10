@@ -106,7 +106,7 @@
 					
 					<div class="grid_top magin_t3" style="margin-left: 350px; margin-bottom: 20px;">
 						<h3>서버 담당자</h3>
-						<div class="left_box2" style="height: 385px; max-height: 385px; overflow: hidden;">
+						<div class="left_box2 minW_2" style="height: 385px; max-height: 385px; overflow: hidden;">
 		   					<table id="userGrid"></table>
 		   					<div id="userGridPager"></div>
 		   				</div>
