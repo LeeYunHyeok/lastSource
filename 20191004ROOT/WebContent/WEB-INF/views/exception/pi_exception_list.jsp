@@ -40,18 +40,18 @@
 							</select>
 						</div>
 							
-						<div class="select_area bold" style=" position: absolute; font-size:.75vw; width:14vw; right: 23vw; top: 0px;">
+						<div class="select_area bold" style=" position: absolute; font-size:.75vw; width:14vw; right: 24vw; top: 0px;">
 							<div class="radio_area">
 								<input type="radio" name="rdo_status" id="rdo001" value="E" checked="checked"><label for="rdo001">승인</label>
 								<input type="radio" name="rdo_status" id="rdo002" value="D"><label for="rdo002">반려</label>
 								<input type="radio" name="rdo_status" id="rdo003" value="W"><label for="rdo003">대기</label>
 							</div>
 						</div>
-						<div class="select_area bold" style=" position: absolute; right: 10vw; top: 0px; width: 13vw;">
+						<div class="select_area bold" style=" position: absolute; right: 11.5vw; top: 0px; width: 14vw;">
 							<div class="radio_area" style="margin:0;">
-								<input type="date" id="fromDate" style="width:5.5vw; font-size:.7vw; text-align: center;" readonly="readonly" value="${fromDate}" >
+								<input type="date" id="fromDate" style="width:6.5vw; font-size:.6vw; text-align: center;" readonly="readonly" value="${fromDate}" >
 								<span style="width: 8%; margin-right: 3px;">~</span>
-								<input type="date" id="toDate" style="width:5.5vw; font-size:.7vw; text-align: center;" readonly="readonly" value="${toDate}" >
+								<input type="date" id="toDate" style="width:6.5vw; font-size:.6vw; text-align: center;" readonly="readonly" value="${toDate}" >
 							</div>
 						</div>
 						<div class="list_sch">
