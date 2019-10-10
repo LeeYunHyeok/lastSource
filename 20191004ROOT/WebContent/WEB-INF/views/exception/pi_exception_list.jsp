@@ -60,7 +60,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="left_box2" style="overflow: hidden; max-height: 732px;height: 732px;">
+					<div class="left_box2 winM" style="overflow: hidden; max-height: 732px;height: 732px;">
 	   					<table id="targetGrid"></table>
 		   				<div id="targetGridPager"></div>
 					</div>
