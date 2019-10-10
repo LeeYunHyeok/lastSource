@@ -31,7 +31,7 @@
 					<div class="grid_top">
 						<h3>삭제 리스트</h3>
 						
-						<div class="select_area bold" style=" position: absolute; right: 460px; top: 0px;">
+						<div class="select_area bold" style=" position: absolute; font-size:.75vw; width:14vw; top:0; right: 23vw;">
 							Host : 
 							<select id="hostSelect" name="hostSelect">
 								<c:forEach items="${targetList}" var="targetList">
@@ -40,11 +40,11 @@
 							</select>
 						</div>
 							
-						<div class="select_area bold" style=" position: absolute; right: 100px; top: 0px; width: 355px;">
-							<div class="radio_area">
-								<input type="date" id="fromDate" style="text-align: center;" readonly="readonly" value="${fromDate}" >
+						<div class="select_area bold" style=" position: absolute; right: 10vw; top: 0px; width: 13vw;">
+							<div class="radio_area" style="margin:0;">
+								<input type="date" id="fromDate" style="text-align: center; width:5.5vw; font-size:.7vw;" readonly="readonly" value="${fromDate}" >
 								<span style="width: 8%; margin-right: 3px;">~</span>
-								<input type="date" id="toDate" style="text-align: center;" readonly="readonly" value="${toDate}" >
+								<input type="date" id="toDate" style="text-align: center; width:5.5vw; font-size:.7vw;" readonly="readonly" value="${toDate}" >
 							</div>
 						</div>
 						<div class="list_sch">
