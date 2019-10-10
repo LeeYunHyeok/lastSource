@@ -45,6 +45,7 @@
 .minW .ui-jqgrid .ui-jqgrid-hbox{ min-width:920px;}
 .minW_2 .ui-jqgrid .ui-jqgrid-hbox{ min-width:720px;}
 .ui-jqgrid .ui-jqgrid-htable {table-layout:fixed;margin:0;border-collapse: separate;}
+.minW .ui-jqgrid-btable.ui-common-table { min-width:920px important;}
 .minW .ui-jqgrid .ui-jqgrid-htable{ min-width: 920px !important; }
 .minW_2 .ui-jqgrid .ui-jqgrid-htable{ min-width: 720px !important; }
 .ui-jqgrid .ui-jqgrid-htable th div {overflow: hidden; position:relative;margin: .1em 0em .1em 0em;}
