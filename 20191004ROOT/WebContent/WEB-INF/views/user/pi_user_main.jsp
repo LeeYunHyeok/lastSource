@@ -49,15 +49,15 @@
 									</td>
 									<th style="border-bottom: 2px solid #ddd;">사용자 번호</th>
 									<td>${memberInfo.USER_NO}</td>
-									<th class="btn_area2">비밀번호
-										<button class="margin_reset" type="button" id="btnChangePwd" style="margin-left: 20px;">비밀번호변경</button>
+									<th class="btn_area2" style="width:8vw; padding:0 7px;">비밀번호
+										<button class="margin_reset" type="button" id="btnChangePwd" style="margin-top: 2px; width:6vw; font-size:.75vw;">비밀번호변경</button>
 									</th>
 									<td><input type="password" id="passwd" value="${memberInfo.USER_NO}" class="edt_read" disabled></td>
 								</tr>
 								<tr style="height: 70px;">
-									<th class="btn_area2">접근가능IP
+									<th class="btn_area2" style="width:8vw; padding:0 7px;">접근가능IP
 									<c:if test="${memberInfo.USER_GRADE == '9'}">
-										<button class="margin_reset"  type="button" id="btnAccessIPChange" style="margin-left: 20px;">접근정보변경</button>
+										<button class="margin_reset"  type="button" id="btnAccessIPChange" style="margin-top: 2px; margin-left: 0; width:6vw; font-size:.75vw;">접근정보변경</button>
 									</c:if>									
 									</th>
 									<td id="accessIPtd" colspan="3">
