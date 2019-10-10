@@ -40,9 +40,9 @@
                             <td style="width:10vw"><input type="text" style="width: 100%;" size="20" id="schFilename" placeholder="문서명을 입력하세요"></td>
                             <td style="text-align: center; background-color: #d6e4ed; width:5.5vw">문서저장일</td>
                             <td style="width:17vw;">
-                                <input type="date" id="fromDate" style="text-align: center; width:8vw;" readonly="readonly" value="${fromDate}" >
+                                <input type="date" id="fromDate" style="text-align: center; width:8.5vw;" readonly="readonly" value="${fromDate}" >
                                 <span style="width: 8%; margin-right: 3px;">~</span>
-                                <input type="date" id="toDate" style="text-align: center; width:8vw;" readonly="readonly" value="${toDate}" >
+                                <input type="date" id="toDate" style="text-align: center; width:8.5vw;" readonly="readonly" value="${toDate}" >
                             </td>
                         </tr>
                     </tbody>
