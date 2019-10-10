@@ -40,11 +40,11 @@
 							</select>
 						</div>
 							
-						<div class="select_area bold" style=" position: absolute; right: 10vw; top: 0px; width: 13vw;">
+						<div class="select_area bold" style=" position: absolute; right: 10vw; top: 0px; width: 20vw;">
 							<div class="radio_area" style="margin:0;">
-								<input type="date" id="fromDate" style="text-align: center; width:5.5vw; font-size:.7vw;" readonly="readonly" value="${fromDate}" >
+								<input type="date" id="fromDate" style="text-align: center; width:8.5vw; font-size:.7vw;" readonly="readonly" value="${fromDate}" >
 								<span style="width: 8%; margin-right: 3px;">~</span>
-								<input type="date" id="toDate" style="text-align: center; width:5.5vw; font-size:.7vw;" readonly="readonly" value="${toDate}" >
+								<input type="date" id="toDate" style="text-align: center; width:8.5vw; font-size:.7vw;" readonly="readonly" value="${toDate}" >
 							</div>
 						</div>
 						<div class="list_sch">
