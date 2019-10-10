@@ -44,15 +44,15 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<td style="text-align: center; background-color: #d6e4ed; width:10vw; font-size:.85vw; padding: 10px 3px;">사용자 ID</td>
-									<td><input type="text" style="width: 9.5vw; font-size:.85vw;" id="userNo" placeholder="사용자 ID를 입력하세요"></td>
-									<td style="text-align: center; background-color: #d6e4ed; width:10vw; font-size:.85vw; padding: 10px 3px;">사용자 명</td>
-									<td><input type="text" style="width: 9.5vw; font-size:.85vw;" id="userName" placeholder="사용자명을 입력하세요"></td>
+									<td style="text-align: center; background-color: #d6e4ed; max-width:10vw; font-size:.85vw; padding: 10px 3px;">사용자 ID</td>
+									<td style="max-width:2vw"><input type="text" style="width: 9.5vw; font-size:.85vw;" id="userNo" placeholder="사용자 ID를 입력하세요"></td>
+									<td style="text-align: center; background-color: #d6e4ed; max-width:10vw; font-size:.85vw; padding: 10px 3px;">사용자 명</td>
+									<td style="max-width:2vw;"><input type="text" style="width: 9.5vw; font-size:.85vw;" id="userName" placeholder="사용자명을 입력하세요"></td>
 									<td style="text-align: center; background-color: #d6e4ed; width:10vw; font-size:.85vw; padding: 10px 3px;">사용기간</td>
 									<td style="padding: 10px 3px;">
-										<input type="date" id="fromDate" style="width: 6.9vw; text-align: center; font-size:.7vw; padding-right: 12px;" readonly="readonly" value="${fromDate}" >
+										<input type="date" id="fromDate" style="width: 7.5vw; text-align: center; font-size:.7vw; padding-right: 12px;" readonly="readonly" value="${fromDate}" >
 										<span style="width: 8%; margin-right: 0;">~</span>
-										<input type="date" id="toDate" style="width: 6.9vw; text-align: center; font-size:.7vw; padding-right: 12px;" readonly="readonly" value="${toDate}" >
+										<input type="date" id="toDate" style="width: 7.5vw; text-align: center; font-size:.7vw; padding-right: 12px;" readonly="readonly" value="${toDate}" >
 									</td>
 									<td class="btn_area2" style="text-align: right;">
 										<button class="margin_reset" type="button" id="serch_log"> 검색 </button>
