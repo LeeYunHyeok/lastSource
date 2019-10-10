@@ -31,7 +31,7 @@
 					<!-- user info -->
 					<div class="grid_top">
 						<h3>접속로그관리</h3>
-						<table class="user_info" style="max-width:950px; ">
+						<table class="user_info" style="width: auto !important;">
 							<caption>사용자정보</caption>
 							<colgroup>
 								<col width="120px"/>
