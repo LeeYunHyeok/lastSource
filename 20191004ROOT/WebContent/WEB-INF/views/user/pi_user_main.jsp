@@ -50,7 +50,7 @@
 									<th style="border-bottom: 2px solid #ddd;">사용자 번호</th>
 									<td>${memberInfo.USER_NO}</td>
 									<th class="btn_area2" style="width:8vw; padding:0 7px;">비밀번호
-										<button class="margin_reset" type="button" id="btnChangePwd" style="margin-top: 2px; width:6vw; font-size:.75vw;">비밀번호변경</button>
+										<button class="margin_reset" type="button" id="btnChangePwd" style="margin-top: 2px; margin-left: 0; width:6vw; font-size:.75vw;">비밀번호변경</button>
 									</th>
 									<td><input type="password" id="passwd" value="${memberInfo.USER_NO}" class="edt_read" disabled></td>
 								</tr>
@@ -82,14 +82,14 @@
 									<td><h3>사용자 현황</h3></td>
 									<td class="btn_area" style="text-align: right; padding: 0px;">
 									<c:if test="${memberInfo.USER_GRADE == '9'}">
-										<button type="button" id="btnManagerRegist" style="margin: 0px;"> 관리자 등록 </button>
-										<button type="button" id="btnAccountCreate" style="margin: 0px;"> 사용자 등록 </button>
+										<button type="button" id="btnManagerRegist" style="padding: 0 10px; margin: 0px;"> 관리자 등록 </button>
+										<button type="button" id="btnAccountCreate" style="padding: 0 10px; margin: 0px;"> 사용자 등록 </button>
 									</c:if>
 									</td>
 								</tr>
 							</table>
 
-							<div class="left_box2" style="overflow: hidden; max-height: 530px; height: 530px;">
+							<div class="left_box2 minW" style="overflow: hidden; max-height: 530px; height: 530px;">
 			   					<table id="userGrid"></table>
 			   					<div id="userGridPager"></div>
 							</div>

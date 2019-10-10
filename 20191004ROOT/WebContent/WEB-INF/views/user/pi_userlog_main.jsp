@@ -44,15 +44,15 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<td style="text-align: center; background-color: #d6e4ed;">사용자 ID</td>
-									<td><input type="text" style="width: 100%;" size="20" id="userNo" placeholder="사용자 ID를 입력하세요"></td>
-									<td style=text-align: center; background-color: #eeeeee;">사용자 명</td>
-									<td><input type="text" style="width: 100%;" size="20" id="userName" placeholder="사용자명을 입력하세요"></td>
-									<td style="text-align: center; background-color: #d6e4ed;">사용기간</td>
-									<td>
-										<input type="date" id="fromDate" style="text-align: center;" readonly="readonly" value="${fromDate}" >
+									<td style="text-align: center; background-color: #d6e4ed; width:10vw; font-size:.85vw; padding: 10px 3px;">사용자 ID</td>
+									<td><input type="text" style="width: 9.5vw; font-size:.85vw;" size="20" id="userNo" placeholder="사용자 ID를 입력하세요"></td>
+									<td style="text-align: center; background-color: #d6e4ed; width:10vw; font-size:.85vw; padding: 10px 3px;">사용자 명</td>
+									<td><input type="text" style="width: 9.5vw; font-size:.85vw;" size="20" id="userName" placeholder="사용자명을 입력하세요"></td>
+									<td style="text-align: center; background-color: #d6e4ed; width:10vw; font-size:.85vw; padding: 10px 3px;">사용기간</td>
+									<td style="padding: 10px 3px;">
+										<input type="date" id="fromDate" style="width: 8vw; text-align: center; font-size:.85vw;" readonly="readonly" value="${fromDate}" >
 										<span style="width: 8%; margin-right: 3px;">~</span>
-										<input type="date" id="toDate" style="text-align: center;" readonly="readonly" value="${toDate}" >
+										<input type="date" id="toDate" style="width: 8vw; text-align: center; font-size:.85vw;" readonly="readonly" value="${toDate}" >
 									</td>
 									<td class="btn_area2" style="text-align: right;">
 										<button class="margin_reset" type="button" id="serch_log"> 검색 </button>
