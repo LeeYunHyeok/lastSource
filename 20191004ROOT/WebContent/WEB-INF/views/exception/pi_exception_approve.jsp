@@ -31,9 +31,9 @@
 					<div class="grid_top">
 						<h3>예외처리 승인</h3>
 					
-						<div class="select_area bold">
+						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 43vw; width: 20vw">
 							신청자 : 
-							<select id="userSelect" name="userSelect" style="position:absolute; font-size:.75vw; right: 43vw; width: 20vw">
+							<select id="userSelect" name="userSelect" style="min-width:12vw;  font-size:.75vw;">
 								<c:forEach items="${teamMemberList}" var="teamMemberList">
 				   				<option value="${teamMemberList.USER_NO}">${teamMemberList.USER_NAME} ${teamMemberList.JIKGUK} (${teamMemberList.USER_NO})</option>
 								</c:forEach>
