@@ -31,7 +31,7 @@
 					<div class="grid_top">
 						<h3>예외처리 승인</h3>
 					
-						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 43vw; width: 20vw">
+						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 40vw; top:0; width: 20vw">
 							신청자 : 
 							<select id="userSelect" name="userSelect" style="min-width:12vw;  font-size:.75vw;">
 								<c:forEach items="${teamMemberList}" var="teamMemberList">
@@ -40,7 +40,7 @@
 							</select>
 						</div>
 							
-						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 43vw; width: 20vw">
+						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 20vw; top:0; width: 20vw">
 							<div class="radio_area">
 								Host : 
 								<select id="hostSelect" name="hostSelect" style="min-width:12vw; font-size:.75vw">
@@ -59,7 +59,7 @@
 							</div>
 						</div>
  -->
-						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 43vw; width: 20vw">
+						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 8vw; width: 20vw; top:0; ">
 							<div class="radio_area">
 								<input type="date" id="fromDate" style="text-align: center; width:8.5vw; font-size:.7vw;" readonly="readonly" value="${fromDate}" >
 								<span style="width: 8%; margin-right: 3px;">~</span>
