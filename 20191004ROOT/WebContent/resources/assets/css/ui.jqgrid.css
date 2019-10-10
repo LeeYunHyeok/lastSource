@@ -28,6 +28,7 @@
 	position: absolute; 
 }
 .minW .ui-jqgrid-bdiv { min-width: 920px !important; } 
+.minW #userGrid { min-width: 920px;}
 .minW_2 .ui-jqgrid-bdiv { min-width: 720px !important; }
 .minH .ui-jqgrid-bdiv { height: 550px !important; }
 .minW_2  .ui-jqgrid-hdiv.ui-state-default.ui-corner-top { min-width: 720px !important; }
