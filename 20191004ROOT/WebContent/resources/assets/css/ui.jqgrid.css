@@ -29,6 +29,7 @@
 }
 .minW .ui-jqgrid-bdiv { min-width: 920px !important; } 
 .minW_2 .ui-jqgrid-bdiv { min-width: 720px !important; }
+.minH .ui-jqgrid-bdiv { height: 550px !important; }
 .minW_2  .ui-jqgrid-hdiv.ui-state-default.ui-corner-top { min-width: 720px !important; }
 .ui-jqgrid .ui-jqgrid-titlebar-close { position: absolute;top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height:18px; cursor:pointer;}
 .ui-jqgrid .ui-jqgrid-titlebar-close span { display: block; margin: 1px; }
