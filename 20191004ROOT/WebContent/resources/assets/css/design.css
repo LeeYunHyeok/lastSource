@@ -247,7 +247,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 
 /* contents */
 .content{float: right; width: calc( 100% - 290px ); margin: 45px 0 0 0; padding-left: 50px;}
-.content h3{position: relative; font-family: 'S-CoreDream-6Bold'; padding-left:40px; font-size: 20px; font-weight: 500; height: 40px; color: #222;}
+.content h3{position: relative; font-family: 'S-CoreDream-6Bold'; font-size: 20px; font-weight: 500; height: 40px; color: #222;}
 .detectionListMenu:before {
 	position: absolute;
     content: "";
