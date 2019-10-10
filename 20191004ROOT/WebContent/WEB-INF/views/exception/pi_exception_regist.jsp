@@ -31,12 +31,12 @@
 						<h3>검출 리스트</h3>
 						
 						<div class="sch_left" style=" position: absolute; top: 0; width: 15vw; right: 43vw; font-size:.75vw">
-							경로 : <input type="text" id="searchLocation" value="" class="edt_sch" style="width: 263px;">
-							<button id="btnSearch" class="btn_sch">검색</button>
+							경로 : <input type="text" id="searchLocation" value="" class="edt_sch" style="width: 12vw;">
+							<button id="btnSearch" class="btn_sch" style="right:1vw;">검색</button>
 						</div>
-						<div class="select_area bold" style=" position: absolute; right: 200px; top: 0;">
+						<div class="select_area bold" style=" position: absolute; right: 10vw; font-size:.75vw; top: 0;">
 							Host : 
-							<select id="hostSelect" name="hostSelect">
+							<select id="hostSelect" name="hostSelect" style="width:15vw; font-size:0.75vw">
 								<c:forEach items="${targetList}" var="targetList">
 				   				<option value="${targetList.TARGET_ID}"<c:if test="${targetList.TARGET_ID == target_id}">selected</c:if>>${targetList.AGENT_NAME} - ${targetList.AGENT_CONNECTED_IP}</option>
 								</c:forEach>
