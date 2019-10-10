@@ -28,7 +28,7 @@
 					</div>
 					<div class="left_area2">
 						<h3>서버 리스트</h3>
-						<div class="left_box2" style="overflow: hidden; max-height: 732px;height: 732px;">
+						<div class="left_box2 minH" style="overflow: hidden; max-height: 732px;height: 732px;">
 							<div class="search_area bold">
 								<input type="text" id="txt_host" value="" style="width: 300px" placeholder="호스트 이름을 입력하세요.">
 								<button type="button" id="btn_search" style="right: 5px;">검색</button>
