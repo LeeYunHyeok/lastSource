@@ -45,9 +45,9 @@
 							<tbody>
 								<tr>
 									<td style="text-align: center; background-color: #d6e4ed; width:10vw; font-size:.85vw; padding: 10px 3px;">사용자 ID</td>
-									<td><input type="text" style="width: 9.5vw; font-size:.85vw;" size="20" id="userNo" placeholder="사용자 ID를 입력하세요"></td>
+									<td><input type="text" style="width: 9.5vw; font-size:.85vw;" id="userNo" placeholder="사용자 ID를 입력하세요"></td>
 									<td style="text-align: center; background-color: #d6e4ed; width:10vw; font-size:.85vw; padding: 10px 3px;">사용자 명</td>
-									<td><input type="text" style="width: 9.5vw; font-size:.85vw;" size="20" id="userName" placeholder="사용자명을 입력하세요"></td>
+									<td><input type="text" style="width: 9.5vw; font-size:.85vw;" id="userName" placeholder="사용자명을 입력하세요"></td>
 									<td style="text-align: center; background-color: #d6e4ed; width:10vw; font-size:.85vw; padding: 10px 3px;">사용기간</td>
 									<td style="padding: 10px 3px;">
 										<input type="date" id="fromDate" style="width: 8vw; text-align: center; font-size:.85vw;" readonly="readonly" value="${fromDate}" >
@@ -70,7 +70,7 @@
 								<button type="button" name="button" class="btn_new" id="btnDownloadExel">다운로드</button>
 							</div>
 						</div>
-						<div class="left_box2" style="overflow: hidden; max-height: 615px; height: 615px;">
+						<div class="left_box2 minW" style="overflow: hidden; max-height: 615px; height: 615px;">
 		   					<table id="userGrid"></table>
 		   					<div id="userGridPager"></div>
 						</div>
