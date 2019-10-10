@@ -40,7 +40,7 @@
 							</select>
 						</div>
 							
-						<div class="select_area bold" style=" position: absolute; font-size:.75vw; width:12vw; right: 6vw; top: 0px;">
+						<div class="select_area bold" style=" position: absolute; font-size:.75vw; width:14vw; right: 23vw; top: 0px;">
 							<div class="radio_area">
 								<input type="radio" name="rdo_status" id="rdo001" value="E" checked="checked"><label for="rdo001">승인</label>
 								<input type="radio" name="rdo_status" id="rdo002" value="D"><label for="rdo002">반려</label>
