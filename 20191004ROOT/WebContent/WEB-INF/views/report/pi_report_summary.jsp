@@ -23,32 +23,32 @@
                         <button type="button" name="button" class="btn_new" id="btnDownloadExel">다운로드</button>
                     </div>
                 </div>
-                <table class="user_info">
+                <table class="user_info narrowTable">
                     <caption>사용자정보</caption>
                     <tbody>
                         <tr>
-                            <td style="text-align: center; background-color: #eeeeee; width:100px">업무구분</td>
-                            <td style="width:180px;">
-                                <select id="selectList" name="selectList" style="width:160px;">
+                            <td style="text-align: center; background-color: #d6e4ed; width:4vw; font-size:.85vw">업무구분</td>
+                            <td style="width:7vw;">
+                                <select id="selectList" name="selectList" style="width:6.5vw;">
                                     <option value="/report/pi_report_summary" selected>통합 보고서</option>
                                     <option value="/report/pi_report_exception">예외/오탐수용 보고서</option>
                                 </select>
                             </td>
-                            <td style="text-align: center; background-color: #eeeeee; width:100px">호스트</td>
-                            <td><input type="text" style="width: 100%;" size="10" id="schOwner" placeholder="호스트명을 입력하세요"></td>
-                            <td style="text-align: center; background-color: #eeeeee; width:100px">경로명</td>
-                            <td><input type="text" style="width: 100%;" size="20" id="schFilename" placeholder="문서명을 입력하세요"></td>
-                            <td style="text-align: center; background-color: #eeeeee; width:100px">문서저장일</td>
-                            <td style="width:300px;">
-                                <input type="date" id="fromDate" style="text-align: center; width:127px" readonly="readonly" value="${fromDate}" >
+                            <td style="text-align: center; background-color: #d6e4ed; width:4vw">호스트</td>
+                            <td style="width:10vw"><input type="text" style="width: 100%;" size="10" id="schOwner" placeholder="호스트명을 입력하세요"></td>
+                            <td style="text-align: center; background-color: #d6e4ed; width:4vw">경로명</td>
+                            <td style="width:10vw"><input type="text" style="width: 100%;" size="20" id="schFilename" placeholder="문서명을 입력하세요"></td>
+                            <td style="text-align: center; background-color: #d6e4ed; width:5.5vw">문서저장일</td>
+                            <td style="width:17vw;">
+                                <input type="date" id="fromDate" style="text-align: center; width:8vw;" readonly="readonly" value="${fromDate}" >
                                 <span style="width: 8%; margin-right: 3px;">~</span>
-                                <input type="date" id="toDate" style="text-align: center; width:127px" readonly="readonly" value="${toDate}" >
+                                <input type="date" id="toDate" style="text-align: center; width:8vw;" readonly="readonly" value="${toDate}" >
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-			<div class="left_box2" style="overflow: hidden; max-height: 732px; height: 732px;">
+			<div class="left_box2 minW" style="overflow: hidden; max-height: 732px; height: 732px;">
 				<table id="targetGrid"></table>
 				<div id="targetGridPager"></div>
 			</div>

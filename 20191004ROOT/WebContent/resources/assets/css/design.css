@@ -509,7 +509,10 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .step_tbl tbody td button:hover{border: 1px solid #006EB6; background: #006EB6;}
 .in_content{padding: 10px 0; line-height: 3;}
 .in_content p{display: inline-block; width: 80px;}
-
+.narrowTable.user_info td, 
+.narrowTable.user_info th { padding: 7px 2px !important; font-size: .85vw;}
+.narrowTable.user_info td select,
+.narrowTable.user_info td input { font-size: .85vw;} 
 /* 검출관리 */
 .select_area{height: 40px; position: relative; width: 400px; display: inline-block;}
 .select_area select{min-width: 330px; padding-left: 5px;}
