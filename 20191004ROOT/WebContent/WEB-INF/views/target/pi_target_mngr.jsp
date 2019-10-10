@@ -34,7 +34,7 @@
 								<input type="text" id="txt_host" value="" style="width: 320px" placeholder="호스트 이름을 입력하세요.">
 								<button type="button" id="btn_search" style="right: -12px;">검색</button>
 							</div>
-		   					<table id="targetGrid"></table>
+		   					<table id="targetGrid minH"></table>
 		   					<div id="targetGridPager"></div>
 						</div>
 						<table class="user_info magin_t1">
