@@ -319,11 +319,12 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     background: url(../images/pi_white_04.png) no-repeat center center;
     background-size: contain;
 }
+.pi_black { padding-left: 30px; } 
 .pi_black_01:before {
 	position: absolute;
     content: "";
-    top: 0;
-    left: 4px;
+    top: 45px;
+    left: 17px;
     width: 28px;
     height: 28px;
     background: url(../images/pi_black_01.png) no-repeat center center;
@@ -332,8 +333,8 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .pi_black_02:before {
 	position: absolute;
     content: "";
-    top: 0;
-    left: 4px;
+    top: 45px;
+    left: 17px;
     width: 28px;
     height: 28px;
     background: url(../images/pi_black_02.png) no-repeat center center;
@@ -342,8 +343,8 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .pi_black_03:before {
 	position: absolute;
     content: "";
-    top: 0;
-    left: 4px;
+    top: 45px;
+    left: 17px;
     width: 28px;
     height: 28px;
     background: url(../images/pi_black_03.png) no-repeat center center;
@@ -352,8 +353,8 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .pi_black_04:before {
 	position: absolute;
     content: "";
-    top: 0;
-    left: 4px;
+    top: 45px;
+    left: 17px;
     width: 28px;
     height: 28px;
     background: url(../images/pi_black_04.png) no-repeat center center;

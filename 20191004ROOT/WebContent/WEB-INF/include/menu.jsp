@@ -5,7 +5,7 @@
 				<div class="lnb">
 					<div class="magin_t45">
 			<c:if test="${menuItem == 'userMain'}">
-						<h3 class="pi_black_01">사용자 관리</h3>
+						<h3 class="pi_black pi_black_01">사용자 관리</h3>
 						<!-- left menu-->
 						<ul class="menu_list">
 							<li>
@@ -20,7 +20,7 @@
 								</ul>
 			</c:if>
 			<c:if test="${menuItem == 'userLog'}">
-						<h3 class="pi_black_01">사용자 관리</h3>
+						<h3 class="pi_black pi_black_01">사용자 관리</h3>
 						<!-- left menu-->
 						<ul class="menu_list">
 							<li>
@@ -35,7 +35,7 @@
 								</ul>
 			</c:if>
 			<c:if test="${menuItem == 'targetMgr'}">
-						<h3 class="pi_black_02">타겟 관리</h3>
+						<h3 class="pi_black pi_black_02">타겟 관리</h3>
 						<!-- left menu-->
 						<ul class="menu_list">
 							<li>
@@ -52,7 +52,7 @@
 								</ul>
 			</c:if>
 			<c:if test="${menuItem == 'targetAssign'}">
-						<h3 class="pi_black_02">타겟 관리</h3>
+						<h3 class="pi_black pi_black_02">타겟 관리</h3>
 						<!-- left menu-->
 						<ul class="menu_list">
 							<li>
@@ -70,7 +70,7 @@
 								</ul>
 			</c:if>
 			<c:if test="${menuItem == 'exceptionRegist'}">
-						<h3 class="pi_black_03">예외처리 관리</h3>
+						<h3 class="pi_black pi_black_03">예외처리 관리</h3>
 						<!-- left menu-->
 						<ul class="menu_list">
 							<li>
@@ -96,7 +96,7 @@
 									</ul>
 			</c:if>
 			<c:if test="${menuItem == 'exceptionList'}">
-						<h3 class="pi_black_03">예외처리 관리</h3>
+						<h3 class="pi_black pi_black_03">예외처리 관리</h3>
 						<!-- left menu-->
 						<ul class="menu_list">
 							<li>
@@ -122,7 +122,7 @@
 									</ul>
 			</c:if>
 			<c:if test="${menuItem == 'exceptionDeletion'}">
-						<h3 class="pi_black_03">예외처리 관리</h3>
+						<h3 class="pi_black pi_black_03">예외처리 관리</h3>
 						<!-- left menu-->
 						<ul class="menu_list">
 							<li>
@@ -148,7 +148,7 @@
 									</ul>
 			</c:if>
 			<c:if test="${menuItem == 'exceptionAppr'}">
-						<h3 class="pi_black_03">예외처리 관리</h3>
+						<h3 class="pi_black pi_black_03">예외처리 관리</h3>
 						<!-- left menu-->
 						<ul class="menu_list">
 							<li>
@@ -174,7 +174,7 @@
 									</ul>
 			</c:if>
             <c:if test="${menuItem == 'reportAppr'}">
-                        <h3 class="pi_black_03">예외처리 관리</h3>
+                        <h3 class="pi_black pi_black_03">예외처리 관리</h3>
                         <!-- left menu-->
                         <ul class="menu_list">
                             <li>
@@ -200,7 +200,7 @@
                                     </ul>
             </c:if>
 			<c:if test="${menuItem == 'scanMgr'}">
-						<h3 class="pi_black_04">스캔 관리</h3>
+						<h3 class="pi_black pi_black_04">스캔 관리</h3>
 						<!-- left menu-->
 						<ul class="menu_list">
 							<li>
@@ -218,7 +218,7 @@
 									</ul>
 			</c:if>
 			<c:if test="${menuItem == 'rescan'}">
-						<h3 class="pi_black_04">스캔 관리</h3>
+						<h3 class="pi_black pi_black_04">스캔 관리</h3>
 						<!-- left menu-->
 						<ul class="menu_list">
 							<li>
@@ -237,7 +237,7 @@
 			</c:if>
 			<c:if test="${menuItem == 'history'}">
 					
-						<h3 class="pi_black_04">스캔 관리</h3>
+						<h3 class="pi_black pi_black_04">스캔 관리</h3>
 						<!-- left menu-->
 						<ul class="menu_list">
 							<li>
