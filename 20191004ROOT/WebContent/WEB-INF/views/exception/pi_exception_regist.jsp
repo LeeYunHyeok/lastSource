@@ -30,7 +30,7 @@
 					<div class="grid_top">
 						<h3>검출 리스트</h3>
 						
-						<div class="sch_left" style=" position: absolute; top: 0; width: 15vw; right: 43vw; font-size:.75vw">
+						<div class="sch_left" style="position: absolute; top: 0; width: 15vw; right: 43vw; font-size:.75vw">
 							경로 : <input type="text" id="searchLocation" value="" class="edt_sch" style="width: 12vw;">
 							<button id="btnSearch" class="btn_sch" style="right:1vw;">검색</button>
 						</div>
