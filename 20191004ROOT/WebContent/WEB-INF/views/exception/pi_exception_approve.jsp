@@ -40,7 +40,7 @@
 							</select>
 						</div>
 							
-						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 22vw; top:0; width: 17vw">
+						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 23.5vw; top:0; width: 17vw">
 							<div class="radio_area" style="margin:0;">
 								Host :  
 								<select id="hostSelect" name="hostSelect" style="min-width:12vw; width:14vw; font-size:.75vw">
@@ -59,7 +59,7 @@
 							</div>
 						</div>
  -->
-						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 7.5vw; width: 13vw; top:0; ">
+						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 9vw; width: 13vw; top:0; ">
 							<div class="radio_area" style="margin:0;">
 								<input type="date" id="fromDate" style="text-align: center; width:6vw; font-size:.5vw;" readonly="readonly" value="${fromDate}" >
 								<span style="width: 8%;">~</span>
