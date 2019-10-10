@@ -27,7 +27,7 @@
 						<p class="location">스캔관리 > 스캔 스케쥴</p>
 					</div>
 					<div class="left_area2 width_17 minW">
-						<h3 style="padding-left:0; text-align:center;">스캔 스케줄 검색</h3>
+						<h3 class="pi_black_01" style="padding-left:0; text-align:center;">스캔 스케줄 검색</h3>
 							<div class="scan_left">
 								<div class="sch_left">
 									<input type="text" id="searchHost" value="" class="edt_sch">
