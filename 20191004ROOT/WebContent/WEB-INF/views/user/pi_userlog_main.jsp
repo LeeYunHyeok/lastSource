@@ -21,7 +21,7 @@
 		<!-- section -->
 		<section>
 			<!-- container -->
-			<div class="container">
+			<div class="container" style="max-width:1400px; min-width:1200px;">
 			<%@ include file="../../include/menu.jsp"%>
 				<!-- content -->
 				<div class="content magin_t45">
@@ -31,7 +31,7 @@
 					<!-- user info -->
 					<div class="grid_top">
 						<h3>접속로그관리</h3>
-						<table class="user_info">
+						<table class="user_info" style="max-width:950px; ">
 							<caption>사용자정보</caption>
 							<colgroup>
 								<col width="120px"/>
@@ -44,11 +44,11 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<td style="text-align: center; background-color: #eeeeee;">사용자 ID</td>
+									<td style="text-align: center; background-color: #d6e4ed;">사용자 ID</td>
 									<td><input type="text" style="width: 100%;" size="20" id="userNo" placeholder="사용자 ID를 입력하세요"></td>
 									<td style=text-align: center; background-color: #eeeeee;">사용자 명</td>
 									<td><input type="text" style="width: 100%;" size="20" id="userName" placeholder="사용자명을 입력하세요"></td>
-									<td style="text-align: center; background-color: #eeeeee;">사용기간</td>
+									<td style="text-align: center; background-color: #d6e4ed;">사용기간</td>
 									<td>
 										<input type="date" id="fromDate" style="text-align: center;" readonly="readonly" value="${fromDate}" >
 										<span style="width: 8%; margin-right: 3px;">~</span>
