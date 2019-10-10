@@ -50,7 +50,7 @@
 								</td>
 							</tr>
 						</table> 
-						<div class="left_box2 minW_2" style="overflow: hidden; max-height: 732px;height: 732px;">
+						<div class="left_box2 minW_2 minH" style="overflow: hidden; max-height: 732px;height: 732px;">
 		   					<table id="userGrid"></table>
 		   					<div id="userGridPager"></div>
 		   				</div>
