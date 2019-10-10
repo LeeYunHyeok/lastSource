@@ -29,7 +29,7 @@
 					</div>
 					<div class="left_area2" style="height: 700px;">
 						<h3>서버 리스트</h3> 
-						<div class="left_box2" style="overflow: hidden; max-height: 760px; height: 760px;">
+						<div class="left_box2 minW_2" style="overflow: hidden; max-height: 760px; height: 760px;">
 		   					<div class="search_area bold">
 								<input type="text" id="txt_host" value="" style="width: 320px" placeholder="호스트 이름을 입력하세요.">
 								<button type="button" id="btn_search" style="right: -12px;">검색</button>

@@ -26,7 +26,7 @@
 					<div class="location_area">
 						<p class="location">스캔관리 > 스캔 스케쥴</p>
 					</div>
-					<div class="left_area2 width_17">
+					<div class="left_area2 width_17 minW">
 						<h3 style="padding-left:0; text-align:center;">스캔 스케줄 검색</h3>
 							<div class="scan_left">
 								<div class="sch_left">
