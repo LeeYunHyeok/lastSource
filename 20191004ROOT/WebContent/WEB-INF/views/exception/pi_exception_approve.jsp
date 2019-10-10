@@ -31,7 +31,7 @@
 					<div class="grid_top">
 						<h3>예외처리 승인</h3>
 					
-						<div class="select_area bold" style=" position: absolute; right: 790px; top: 0px;">
+						<div class="select_area bold" style="float:left; width: 20vw">
 							신청자 : 
 							<select id="userSelect" name="userSelect" style="width: 250px; min-width: 250px;">
 								<c:forEach items="${teamMemberList}" var="teamMemberList">
@@ -40,7 +40,7 @@
 							</select>
 						</div>
 							
-						<div class="select_area bold" style=" position: absolute; right: 460px; top: 0px;">
+						<div class="select_area bold" style="float:left; width: 20vw"">
 							<div class="radio_area">
 								Host : 
 								<select id="hostSelect" name="hostSelect">
@@ -59,7 +59,7 @@
 							</div>
 						</div>
  -->
-						<div class="select_area bold" style=" position: absolute; right: 100px; top: 0px; width: 355px;">
+						<div class="select_area bold" style="float:left; width: 20vw"">
 							<div class="radio_area">
 								<input type="date" id="fromDate" style="text-align: center;" readonly="readonly" value="${fromDate}" >
 								<span style="width: 8%; margin-right: 3px;">~</span>
@@ -72,7 +72,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="left_box2 minW" style="overflow: hidden; max-height: 732px;height: 732px;">
+					<div class="left_box2 minW minH" style="overflow: hidden; max-height: 732px;height: 732px;">
 	   					<table id="targetGrid"></table>
 		   				<div id="targetGridPager"></div>
 					</div>
