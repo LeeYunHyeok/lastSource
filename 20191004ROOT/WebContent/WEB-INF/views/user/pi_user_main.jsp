@@ -32,7 +32,7 @@
 						<div class="grid_top">
 							<h3>사용자 정보</h3>
 						</div>
-						<table class="user_info">
+						<table class="user_info" style="width: auto !important;">
 							<caption>사용자정보</caption>
 							<colgroup>
 								<col width="310px">
