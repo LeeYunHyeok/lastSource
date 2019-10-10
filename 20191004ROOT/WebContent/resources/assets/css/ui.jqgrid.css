@@ -35,7 +35,7 @@
 .ui-jqgrid .ui-jqgrid-titlebar-close:hover { padding: 0; }
 .minW_2 #targetGridPager { min-width: 720px !important; }
 .ui-jqgrid .menubar:hover {  border: 0 none;}
-.minH .ui-jqgrid-bdiv { height: auto !important;}
+.minH .ui-jqgrid-bdiv { min-height: 750px !important;}
 /* header*/
 .ui-jqgrid .ui-jqgrid-hdiv {position: relative; margin: 0;padding: 0; overflow: hidden; border-left: 0 none !important; border-top : 0 none !important; border-right : 0 none !important;}
 .ui-jqgrid .ui-jqgrid-hbox {float: left; padding-right: 20px;}
