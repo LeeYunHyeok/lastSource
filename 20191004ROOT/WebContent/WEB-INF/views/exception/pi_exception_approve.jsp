@@ -61,9 +61,9 @@
  -->
 						<div class="select_area bold" style="position:absolute; font-size:.75vw; right: 9vw; width: 13vw; top:0; ">
 							<div class="radio_area" style="margin:0;">
-								<input type="date" id="fromDate" style="text-align: center; width:6vw; font-size:.5vw;" readonly="readonly" value="${fromDate}" >
+								<input type="date" id="fromDate" style="text-align: center; width:6vw; padding-right:16px; font-size:.6vw;" readonly="readonly" value="${fromDate}" >
 								<span style="width: 8%;">~</span>
-								<input type="date" id="toDate" style="text-align: center; width:6vw; font-size:.5vw;" readonly="readonly" value="${toDate}" >
+								<input type="date" id="toDate" style="text-align: center; width:6vw; padding-right:16px; font-size:.6vw;" readonly="readonly" value="${toDate}" >
 							</div>
 						</div>
 						<div class="list_sch">
