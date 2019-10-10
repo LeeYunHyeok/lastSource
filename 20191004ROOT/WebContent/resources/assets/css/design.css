@@ -92,7 +92,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 	color: #fff; 
 	border-radius: 3px; 
 	border: 0;
-	box-shadow: 5px 5px 5px 5px gray;
+	box-shadow: 2px 2px 12px 0px grey;
 	}
 .login_box:hover .btn_login:hover{
 	background:#006EB6;
