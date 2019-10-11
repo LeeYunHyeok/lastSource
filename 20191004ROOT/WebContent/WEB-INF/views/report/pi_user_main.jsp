@@ -454,7 +454,7 @@ $(document).ready(function () {
 		</c:when>
 	    <c:otherwise>
 			colNames:['사용자 ID', '사용자명', '직급', '부서명', '등록일자','관리자', '관리자'],
-			colModel: [ 
+			colModel:[ 
 	    </c:otherwise>
 		</c:choose>
 		
