@@ -512,7 +512,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .in_content{padding: 10px 0; line-height: 3;}
 .in_content p{display: inline-block; width: 80px;}
 .narrowTable.user_info td, 
-.narrowTable.user_info th { padding: 7px 2px !important; font-size: .85vw;}
+.narrowTable.user_info th { padding: 17px 2px !important; font-size: .85vw;}
 .narrowTable.user_info td select,
 .narrowTable.user_info td input { font-size: .85vw;} 
 /* 검출관리 */
