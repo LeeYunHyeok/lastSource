@@ -216,7 +216,7 @@ h3 {
 					    <h3>타겟 정보</h3>
 					    <div class="chart_box" style="background: #d6e4ed;">
 					      <table>
-					        <tr>
+					        <tr style="height: 73px;">
 					          <td>
 					            <p class="target_tit">서버이름</p>
 					            <p class="target_info" id="server_name">전체 서버</p>
