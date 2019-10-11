@@ -544,7 +544,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .content-box h2{font-size: 18px; line-height: 30px;}
 .popup_tbl{border-top: 2px solid #1898D2; width: 100%;}
 .popup_tbl tbody tr{border-bottom: 1px solid #eee;}
-.popup_tbl tbody th{text-align: center; background: #40C8F4; font-weight: 500;}
+.popup_tbl tbody th{text-align: center; background: #d6e4ed; font-weight: 500;}
 .popup_tbl tbody td{text-align: left; height: 45px; padding-left: 20px; position: relative;}
 .popup_tbl tbody td button{width: 120px !important; border: 1px solid #ddd; border-radius: 2px; background: #f9f9f9; padding: 7px 15px; font-weight: bold;}
 .popup_tbl tbody td button:hover{border: 1px solid #006EB6; background: #006EB6;}
