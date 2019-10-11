@@ -411,6 +411,10 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .user_info td{color: #222;}
 .user_info td .user_name{font-size: 18px; margin-top: 8px;}
 .user_info td .user_name em{font-size: 14px;}
+.user_info.serverInfo td, .user_info.serverInfo th {
+    padding: 17px 5px !important;
+    font-size: .95vw;
+}
 /*approval*/
 .approvalTh td{
 	padding: 12px 5px !important;

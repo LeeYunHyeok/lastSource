@@ -63,7 +63,7 @@
 					
 					<div class="grid_top magin_t3" style="margin-left: 350px;"> 
 						<h3>서버 정보</h3>
-						<table class="user_info">
+						<table class="user_info serverInfo">
 							<caption>서버정보</caption>
 							<colgroup>
 								<col width="15%">
