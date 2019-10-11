@@ -162,6 +162,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .minMenu_2 .lnb { min-height:950px !important; }
 .minMenu .minH_2 .ui-jqgrid-bdiv { height:602px !important}
 .minH_4 .ui-jqgrid-bdiv { height:557px !important}
+.minH_5 .ui-jqgrid-bdiv { height: 467px !important;}
 .lnb h3{font-size: 20px; font-weight: 500; height: 40px; color: #222; font-family: 'S-CoreDream-6Bold'; }
 .lnb .menu_list{ border-top: 2px solid #004cb6; overflow-y: auto; max-height: 550px; font-size: 16px;}
 .lnb .menu_list a{color: #222;}
