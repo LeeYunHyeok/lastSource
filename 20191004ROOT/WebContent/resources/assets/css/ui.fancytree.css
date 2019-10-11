@@ -1,4 +1,4 @@
-/*!
+\\\\\\\/*!
  * Fancytree "awesome" skin.
  *
  * DON'T EDIT THE CSS FILE DIRECTLY, since it is automatically generated from
@@ -18,7 +18,7 @@
 ******************************************************************************/
 /*------------------------------------------------------------------------------
  * Helpers
- *----------------------------------------------------------------------------*/
+ *-------------------------------------------------------------\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\--------------*/
 .fancytree-helper-hidden {
   display: none;
 }
@@ -330,7 +330,7 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
 .width80 {
     min-width: 58vw;
 }
-#main_graph>div {
+#main_graph canvas {
 	min-width: 58vw;
 	max-width: 58vw !important;
 	width: 58vw !important;
@@ -346,7 +346,7 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector > li {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     padding: 0px;
     border-width: 0px;
-    margin: 0px -2vw !important;
+    margin: -5px -2vw !important;
     word-break:break-all !important;
 }
 #main_graph canvas[data-zr-dom-id="zr_0"] textarea {
