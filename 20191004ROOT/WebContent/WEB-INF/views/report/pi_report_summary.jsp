@@ -8,7 +8,7 @@
 <!-- section -->
 <section>
 	<!-- container -->
-	<div class="container">
+	<div class="container minMenu_2">
 	<%@ include file="../../include/menu.jsp"%>
 		<!-- content -->
 		<div class="content magin_t45">

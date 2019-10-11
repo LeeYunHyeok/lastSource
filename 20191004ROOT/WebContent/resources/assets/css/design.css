@@ -159,6 +159,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 /* left menu */
 .lnb{float: left; background: #d6e4ed; min-height:877px; width: 290px; border-right: 1px solid #e7e5e1; padding:0 20px;}
 .minMenu .lnb { min-height:1350px !important; }
+.minMenu_2 .lnb { min-height:950px !important; }
 .minMenu .minH_2 .ui-jqgrid-bdiv { height:603px !important}
 .lnb h3{font-size: 20px; font-weight: 500; height: 40px; color: #222; font-family: 'S-CoreDream-6Bold'; }
 .lnb .menu_list{ border-top: 2px solid #004cb6; overflow-y: auto; max-height: 550px; font-size: 16px;}
@@ -453,8 +454,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .left_list2 .manage li a{display: inline-block;}
 .fancytree-helper-hidden { visibility: hidden; display: none; }
 .scan_left {
-    border-top: 2px solid #ccc;
-    margin: 10px 0 0px 0px;
+    margin: 0px 0 0px 0px;
     padding: 10px 0 0px 0;
     border-bottom: 1px solid #ddd;
     height: 100%;
