@@ -65,7 +65,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .chart_box td img{float: left; padding-right: 15px;}
 .target_tit{font-size: 13px; color: #333;}
 .tagetBox .target_tit { font-size: 1.2vw !important;}
-.tagetBox .target_info { font-size: .95vw !important;}
+.tagetBox .target_info { font-size: .9vw !important;}
 .target_info{font-size: 16px; font-weight: 400; color: #222; margin-top: 5px;}
 .ui-jqgrid-labels th { font-size: .7vw !important;}
 
