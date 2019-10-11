@@ -452,7 +452,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .fancytree-helper-hidden { visibility: hidden; display: none; }
 .scan_left {
     border-top: 2px solid #ccc;
-    margin: 31px 0 0px 0px;
+    margin: 10px 0 0px 0px;
     padding: 10px 0 0px 0;
     border-bottom: 1px solid #ddd;
     height: 100%;
