@@ -437,6 +437,8 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     margin-right: 3px;
     width: .9vw;
 }
+.left_box2.minH_2 .ui-jqgrid-bdiv { max-height: 500px;}
+.left_box2.minH_3 .ui-jqgrid-bdiv { max-height: 425px;}
 .left_box2.minW {min-width: 950px !important;}
 .left_box2.minW_2 {min-width: 750px !important;}
 .left_box2 h4{font-size: 18px; color: #333; padding: 15px 0; border-bottom: 1px solid #beb9b4;}

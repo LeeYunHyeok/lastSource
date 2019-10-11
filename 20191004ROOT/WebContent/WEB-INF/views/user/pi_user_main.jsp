@@ -89,7 +89,7 @@
 								</tr>
 							</table>
 
-							<div class="left_box2 minW minH_2" style="overflow: hidden; max-height: 530px; height: 530px;">
+							<div class="left_box2 minW minH_3" style="overflow: hidden; max-height: 530px; height: 530px;">
 			   					<table id="userGrid"></table>
 			   					<div id="userGridPager"></div>
 							</div>
