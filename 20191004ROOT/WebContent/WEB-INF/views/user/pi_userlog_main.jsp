@@ -70,7 +70,7 @@
 								<button type="button" name="button" class="btn_new" id="btnDownloadExel">다운로드</button>
 							</div>
 						</div>
-						<div class="left_box2 minW" style="overflow: hidden; max-height: 615px; height: 615px;">
+						<div class="left_box2 minW minH_2" style="overflow: hidden; max-height: 615px; height: 615px;">
 		   					<table id="userGrid"></table>
 		   					<div id="userGridPager"></div>
 						</div>
