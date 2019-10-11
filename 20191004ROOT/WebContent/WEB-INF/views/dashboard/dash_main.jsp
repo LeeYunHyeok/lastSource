@@ -393,7 +393,7 @@ h3 {
 									var totalDiv;
 									totalDiv = "<div id='spanid' style='display:inline-block; position:absolute; left: 50%; top:50%; transform: translateX(-50%) translateY(-50%); text-align:center;'>";
 									totalDiv += '<h2>미접속수 : ' + notconnect + '</h2>';
-									totalDiv += '<h1>총 대상수 : ' + total + '</h1></div>';
+									totalDiv += '<h1>총 대상수 : ' + total + '154</h1></div>';
 									
 									$("#circleGraph").append(totalDiv);
 								}

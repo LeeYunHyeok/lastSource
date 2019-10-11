@@ -458,7 +458,7 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .calendar li:first-child{padding: 10px 3px 0 0; float: left; width: 50%;}
 .calendar li:last-child{padding: 10px 0 0 3px; float: left; width: 50%;}
 .calendar li p{font-weight: bold; padding-bottom: 8px;}
-
+#circleGraph h1 { font-size: 1.5vw; }
 .step{border-top: 2px solid #ccc;}
 .step ul{}
 .step li{float: left; width: 33.333%; line-height: 48px; font-size: 18px; padding: 35px 0 20px 10px; text-align: center;}
