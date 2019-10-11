@@ -184,7 +184,7 @@
 					<tbody>
 						<tr>
 							<th>사용자번호</th>
-							<td><input type="text" id="userNo" value="" class="edt_sch" style="width: 280px; background: #f5f1ee; font-weight: bold; padding-left: 10px;">
+							<td><input type="text" id="userNo" value="" class="edt_sch" style="width: 280px; margin-top:7px; background: #f5f1ee; font-weight: bold; padding-left: 10px;">
 								<button type="button" id="btnChkDuplicateUserNo" data-valid="N" data-UserNo="">중복확인</button>
 							</td>
 						</tr>
