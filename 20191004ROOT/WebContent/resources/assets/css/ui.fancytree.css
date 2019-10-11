@@ -649,8 +649,8 @@ ul.ui-fancytree.fancytree-container.fancytree-plain li.fancytree-lastsib:first-o
     border-bottom: 2px solid #ddd;
     width: 12vw;
 }
-.chart_box .squareBox tr:last-of-type td {
-    width: 4vw;
+.chart_box .squareBox tr td:nth-child(2) {
+    width: 4vw !important;
 }
 .chart_box .squareBox tr td { font-size: .85vw;}  
 ul.ui-fancytree.fancytree-container.fancytree-plain li.fancytree-lastsib:first-of-type span span:first-of-type {
