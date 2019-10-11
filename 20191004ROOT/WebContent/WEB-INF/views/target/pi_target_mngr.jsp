@@ -19,7 +19,7 @@
 		<!-- section -->
 		<section>
 			<!-- container -->
-			<div class="container">
+			<div class="container minMenu">
 			<%@ include file="../../include/menu.jsp"%>
 
 				<!-- content -->
@@ -27,7 +27,7 @@
 					<div class="location_area">
 						<p class="location">타겟관리 > 타겟조회</p>
 					</div>
-					<div class="left_area2 minH" style="height: 700px;">
+					<div class="left_area2 minH_2" style="height: 700px;">
 						<h3>서버 리스트</h3> 
 						<div class="left_box2" style="overflow: hidden; min-height: 750px; height: 760px;">
 		   					<div class="search_area bold">
@@ -37,7 +37,7 @@
 		   					<table id="targetGrid"></table>
 		   					<div id="targetGridPager"></div>
 						</div>
-						<table class="user_info magin_t1">
+						<table class="user_info magin_t1" style="margin-top: 77px;">
 							<colgroup>
 								<col width="65%">
 								<col width="35%">
