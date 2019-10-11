@@ -212,7 +212,7 @@ h3 {
 						</script>
 					    </div>
 					  </li>
-					  <li style="width: 12vw;">
+					  <li class="tagetBox" style="width: 14.5vw;">
 					    <h3>타겟 정보</h3>
 					    <div class="chart_box" style="background: #d6e4ed;">
 					      <table>
