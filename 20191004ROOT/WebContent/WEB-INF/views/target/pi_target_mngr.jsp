@@ -29,7 +29,7 @@
 					</div>
 					<div class="left_area2 minH_2" style="height: 700px;">
 						<h3>서버 리스트</h3> 
-						<div class="left_box2" style="overflow: hidden; min-height: 750px; height: 760px;">
+						<div class="left_box2" style="overflow: hidden; min-height: 770px; height: 760px;">
 		   					<div class="search_area bold">
 								<input type="text" id="txt_host" value="" style="width: 320px" placeholder="호스트 이름을 입력하세요.">
 								<button type="button" id="btn_search" style="right: -12px;">검색</button>
@@ -37,7 +37,7 @@
 		   					<table id="targetGrid"></table>
 		   					<div id="targetGridPager"></div>
 						</div>
-						<table class="user_info magin_t1" style="margin-top: 77px;">
+						<table class="user_info magin_t1" style="margin-top: 57px;">
 							<colgroup>
 								<col width="65%">
 								<col width="35%">

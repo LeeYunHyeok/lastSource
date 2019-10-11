@@ -160,7 +160,8 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
 .lnb{float: left; background: #d6e4ed; min-height:877px; width: 290px; border-right: 1px solid #e7e5e1; padding:0 20px;}
 .minMenu .lnb { min-height:1350px !important; }
 .minMenu_2 .lnb { min-height:950px !important; }
-.minMenu .minH_2 .ui-jqgrid-bdiv { height:603px !important}
+.minMenu .minH_2 .ui-jqgrid-bdiv { height:602px !important}
+.minH_4 .ui-jqgrid-bdiv { height:557px !important}
 .lnb h3{font-size: 20px; font-weight: 500; height: 40px; color: #222; font-family: 'S-CoreDream-6Bold'; }
 .lnb .menu_list{ border-top: 2px solid #004cb6; overflow-y: auto; max-height: 550px; font-size: 16px;}
 .lnb .menu_list a{color: #222;}
@@ -575,6 +576,16 @@ footer{max-width: 1400px; min-width: 1280px; display: table-row;}
     border-radius: 2px;
     background: #1898D2;
 }
+.btn_area.grayBtn button {
+    font-size: 15px;
+    font-weight: 500;
+    color: #006EB6;
+    height: 32px;
+    padding: 0 20px !important;
+    border-radius: 4px;
+    background: #d6e4ed;
+    border: 1px solid #ddd;
+    }
 .btn_area button:hover{background: #006EB6; color: #fff;}
 .answerLabel {
     position: relative;

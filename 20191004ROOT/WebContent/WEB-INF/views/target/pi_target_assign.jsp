@@ -28,7 +28,7 @@
 					</div>
 					<div class="left_area2">
 						<h3>서버 리스트</h3>
-						<div class="left_box2 minH" style="overflow: hidden; max-height: 732px;height: 732px;">
+						<div class="left_box2 minH_4" style="overflow: hidden; max-height: 732px;height: 732px;">
 							<div class="search_area bold">
 								<input type="text" id="txt_host" value="" style="width: 300px" placeholder="호스트 이름을 입력하세요.">
 								<button type="button" id="btn_search" style="right: 5px;">검색</button>
@@ -42,7 +42,7 @@
 						<table style="width: 100%;">
 							<tr>
 								<td><h3>서버 담당자</h3></td>
-								<td class="btn_area" style="text-align: right; padding: 0px; width: 29vw;">
+								<td class="btn_area grayBtn" style="text-align: right; padding: 0px; width: 29vw;">
 									<button type="button" id="btnUpload" style="margin: 0px; padding: 0 30px;">업로드</button>
 									<button type="button" id="btnDownloadExel" style="margin: 0px; padding: 0 30px;">다운로드</button>
 									<button type="button" id="btnRegistTargetUser" style="margin: 0px; padding: 0 30px;"> 담당자등록 </button>
